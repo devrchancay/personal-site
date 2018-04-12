@@ -3,22 +3,30 @@
   "description": "Gatsby starter kit",
   "version": "1.0.0",
   "author": "Ramón Chancay <ramonchancayortega@gmail.com>",
+  "now": {
+    "name": "ramonchancay",
+    "alias": "ramonchancay.now.sh"
+  },
   "dependencies": {
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
-    "build": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build",
-    "develop": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && gatsby develop",
+    "build":
+      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build",
+    "develop":
+      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css"
+    "tailwind":
+      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css",
+    "deploy":
+      "cd public && now -e NODE_ENV=production --token $NOW_TOKEN --npm",
+    "alias": "now alias --token=$NOW_TOKEN"
   },
   "devDependencies": {
     "gatsby-source-medium": "^1.0.14",
