@@ -37,9 +37,11 @@ const Posts = ({ posts }) => (
                 {post.node.title}
               </h4>
             </div>
-            <div className="flex px-2 py-1 justify-between absolute pin-b pin-l w-full">
-              <div>Lo Lees en: </div>
-              <div>{Math.round(post.node.virtuals.readingTime)} Minutos 🕔</div>
+            <div className="flex px-2 py-1 justify-center absolute pin-b pin-l w-full">
+              <div className="w-1/2">Lo Lees en: </div>
+              <div className="w-1/2 text-right">
+                {Math.round(post.node.virtuals.readingTime)} Minutos 🕔
+              </div>
             </div>
           </a>
         </div>
