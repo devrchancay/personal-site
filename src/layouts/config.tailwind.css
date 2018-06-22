@@ -28,6 +28,14 @@
   .bg-site-color {
     background: config('colors.site-color');
   }
+
+  .text-animation {
+    transition: all 0.3s ease-out;
+  }
+  .post-box {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 30px;
+    max-height: 250px;
+  }
 }
 
 /**

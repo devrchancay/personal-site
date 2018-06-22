@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import Header from '../components/Header'
 import About from '../components/About'
@@ -10,6 +9,20 @@ const IndexPage = ({ data }) => (
     <Header />
     <About />
     <Posts posts={data.allMediumPost.edges} />
+
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+      <script
+      id="fastoryWidgetContainerScript"
+      async
+      src="https://yam.li/widget/script/tooltip.js"
+      data-offset="20"
+      data-id="Cw3jpKdE"
+    />
+          `,
+      }}
+    />
   </div>
 )
 
@@ -21,12 +34,10 @@ export const query = graphql`
           id
           title
           virtuals {
-            readingTime
             subtitle
             previewImage {
               imageId
             }
-            wordCount
           }
         }
       }

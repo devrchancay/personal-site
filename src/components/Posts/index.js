@@ -3,7 +3,7 @@ import React from 'react'
 const Posts = ({ posts }) => (
   <div className="flex flex-col justify-center items-center content-center py-8 md:w-full">
     <div className="container">
-      <h2 className="font-sans font-bold text-gray-primary mx-2">
+      <h2 className="font-sans font-bold text-center md:text-left text-gray-primary mx-2">
         Ultimos posts
       </h2>
     </div>
@@ -11,11 +11,7 @@ const Posts = ({ posts }) => (
       {posts.map(post => (
         <div
           key={post.node.id}
-          className="flex flex-col mx-2 my-6 pb-3  w-5/6 md:w-1/3 relative border"
-          style={{
-            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 15px 30px',
-            minHeight: '280px',
-          }}
+          className="flex flex-col mx-2 my-6 pb-3  w-5/6 md:w-1/3 relative border post-box"
         >
           <a
             href={`https://medium.com/@devrchancay/${post.node.id}`}
@@ -36,12 +32,6 @@ const Posts = ({ posts }) => (
               <h4 className="font-sans font-bold px-2 py-4">
                 {post.node.title}
               </h4>
-            </div>
-            <div className="flex px-2 py-1 justify-center absolute pin-b pin-l w-full">
-              <div className="w-1/2">Lo Lees en: </div>
-              <div className="w-1/2 text-right">
-                {Math.round(post.node.virtuals.readingTime)} Minutos 🕔
-              </div>
             </div>
           </a>
         </div>

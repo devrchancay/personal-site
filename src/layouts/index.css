@@ -668,6 +668,15 @@ button,
   background: rgb(241, 246, 248) none repeat scroll 0% 0%;
 }
 
+.text-animation {
+  transition: all .3s ease-out;
+}
+
+.post-box {
+  box-shadow: rgba(0, 0, 0, .15) 0 15px 30px;
+  max-height: 250px;
+}
+
 /**
  * Here you would add any of your custom component classes; stuff that you'd
  * want loaded *before* the utilities so that the utilities could still
@@ -4748,6 +4757,15 @@ button,
     background: rgb(241, 246, 248) none repeat scroll 0% 0%;
   }
 
+  .sm\:text-animation {
+    transition: all .3s ease-out;
+  }
+
+  .sm\:post-box {
+    box-shadow: rgba(0, 0, 0, .15) 0 15px 30px;
+    max-height: 250px;
+  }
+
   .sm\:list-reset {
     list-style: none;
     padding: 0;
@@ -8779,6 +8797,15 @@ button,
 
   .md\:bg-site-color {
     background: rgb(241, 246, 248) none repeat scroll 0% 0%;
+  }
+
+  .md\:text-animation {
+    transition: all .3s ease-out;
+  }
+
+  .md\:post-box {
+    box-shadow: rgba(0, 0, 0, .15) 0 15px 30px;
+    max-height: 250px;
   }
 
   .md\:list-reset {
@@ -12814,6 +12841,15 @@ button,
     background: rgb(241, 246, 248) none repeat scroll 0% 0%;
   }
 
+  .lg\:text-animation {
+    transition: all .3s ease-out;
+  }
+
+  .lg\:post-box {
+    box-shadow: rgba(0, 0, 0, .15) 0 15px 30px;
+    max-height: 250px;
+  }
+
   .lg\:list-reset {
     list-style: none;
     padding: 0;
@@ -16845,6 +16881,15 @@ button,
 
   .xl\:bg-site-color {
     background: rgb(241, 246, 248) none repeat scroll 0% 0%;
+  }
+
+  .xl\:text-animation {
+    transition: all .3s ease-out;
+  }
+
+  .xl\:post-box {
+    box-shadow: rgba(0, 0, 0, .15) 0 15px 30px;
+    max-height: 250px;
   }
 
   .xl\:list-reset {
