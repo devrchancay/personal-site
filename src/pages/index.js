@@ -14,11 +14,11 @@ const IndexPage = ({ data }) => (
       dangerouslySetInnerHTML={{
         __html: `
       <script
-      id="fastoryWidgetContainerScript"
-      async
-      src="https://yam.li/widget/script/tooltip.js"
-      data-offset="20"
-      data-id="Cw3jpKdE"
+        id="fastoryWidgetContainerScript"
+        async
+        src="https://yam.li/widget/script/tooltip.js"
+        data-offset="20"
+        data-id="Cw3jpKdE"
     />
           `,
       }}
