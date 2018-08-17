@@ -3,13 +3,14 @@ import React from 'react'
 import Header from '../components/Header'
 import About from '../components/About'
 import Posts from '../components/Posts'
+import Footer from '../components/Footer/index'
 
 const IndexPage = ({ data }) => (
   <div>
     <Header />
     <About />
     <Posts posts={data.allMediumPost.edges} />
-
+    <Footer />
     <script
       dangerouslySetInnerHTML={{
         __html: `
@@ -20,6 +21,11 @@ const IndexPage = ({ data }) => (
         data-offset="20"
         data-id="Cw3jpKdE"
     />
+    <style>
+      iframe#fastoryButtonFrame {
+          bottom: 80px !important;
+      }
+    </style>
           `,
       }}
     />
