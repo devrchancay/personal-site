@@ -3,10 +3,6 @@
   "description": "Gatsby starter kit",
   "version": "1.0.0",
   "author": "Ramón Chancay <ramonchancayortega@gmail.com>",
-  "now": {
-    "name": "public-personal-site",
-    "alias": "ramonchancay.now.sh"
-  },
   "dependencies": {
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
@@ -23,12 +19,7 @@
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind":
-      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css",
-    "predeploy":
-      "mv public public-personal-site && cd public-personal-site && rm *.map",
-    "deploy":
-      "cd public-personal-site && now -e NODE_ENV=production --token $NOW_TOKEN --public",
-    "alias": "now alias --token=$NOW_TOKEN"
+      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css"
   },
   "devDependencies": {
     "gatsby-plugin-react-next": "^1.0.11",
