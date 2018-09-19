@@ -9,7 +9,7 @@ const Header = () => (
         <span className="text-blue-primary mx-1">Ramón Chancay</span>
       </h1>
       <h2 className="text-gray-primary text-center text-xl font-bold md:text-3xl">
-        Desarrollo Full Stack Web 💻
+        Front-end engineer ⚛️
       </h2>
     </div>
     <div className="container flex justify-center">
