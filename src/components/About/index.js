@@ -17,6 +17,15 @@ const About = () => (
         <p className="font-sans text-gray-primary py-1 md:text-xl">
           Actualmente en{' '}
           <a
+            href="https://www.everymundo.com"
+            className="no-underline text-blue-primary font-bold"
+          >
+            EveryMundo
+          </a>
+        </p>
+          <p className="font-sans text-gray-primary py-1 md:text-xl">
+          Antes en{' '}
+         <a
             href="https://www.eluniverso.com"
             className="no-underline text-blue-primary font-bold"
           >
