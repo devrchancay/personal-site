@@ -7,19 +7,19 @@
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-source-graphcms": "^1.0.0-alpha.3",
     "react-helmet": "^5.2.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
-    "build":
-      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build",
-    "develop":
-      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && gatsby develop",
+    "build": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build",
+    "develop": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind":
-      "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css"
+    "tailwind": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css"
   },
   "devDependencies": {
     "gatsby-plugin-react-next": "^1.0.11",
