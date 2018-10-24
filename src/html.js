@@ -40,14 +40,6 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-            <script id="fastoryWidgetContainerScript" async src="https://yam.li/widget/script/tooltip.js" data-offset="20" data-id="Cw3jpKdE"></script>
-        `,
-            }}
-          />
         </body>
       </html>
     )

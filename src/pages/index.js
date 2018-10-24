@@ -11,24 +11,6 @@ const IndexPage = ({ data }) => (
     <About />
     <Posts posts={data.allMediumPost.edges} />
     <Footer />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-      <script
-        id="fastoryWidgetContainerScript"
-        async
-        src="https://yam.li/widget/script/tooltip.js"
-        data-offset="20"
-        data-id="Cw3jpKdE"
-    />
-    <style>
-      iframe#fastoryButtonFrame {
-          bottom: 80px !important;
-      }
-    </style>
-          `,
-      }}
-    />
   </div>
 )
 
