@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "author": "Ramón Chancay <ramonchancayortega@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.241",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby": "^2.0.31",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-source-graphcms": "^1.0.0-alpha.3",
     "react": "^16.6.0",
     "react-helmet": "^5.2.0"
@@ -16,16 +16,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && purgecss -c purgecss.config.js -o ./src/layouts && gatsby build",
-    "develop": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css && gatsby develop",
+    "build": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/index.css && purgecss -c purgecss.config.js -o ./src/components/Layout && gatsby build",
+    "develop": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/index.css && gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "tailwind build ./src/layouts/config.tailwind.css -c ./tailwind.js -o ./src/layouts/index.css"
+    "tailwind": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/index.css"
   },
   "devDependencies": {
     "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-source-medium": "^1.0.14",
-    "prettier": "^1.11.1",
+    "prettier": "^1.14.1",
     "purgecss": "^0.21.0",
     "tailwindcss": "^0.5.2"
   }

@@ -1,17 +1,18 @@
 import React from 'react'
 
+import Layout from '../components/Layout'
 import Header from '../components/Header'
 import About from '../components/About'
 import Posts from '../components/Posts'
 import Footer from '../components/Footer/index'
 
 const IndexPage = ({ data }) => (
-  <div>
+  <Layout>
     <Header />
     <About />
     <Posts posts={data.allMediumPost.edges} />
     <Footer />
-  </div>
+  </Layout>
 )
 
 export const query = graphql`

@@ -36,13 +36,17 @@ const About = () => (
           Disfruto de la construcción de cosas con código.
         </p>
         <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Organizador y Speaker en Meetups por pizza y cerveza. 🍕🍻
+          Organizador y Speaker en Meetups por pizza y cerveza.<span role="img" area-label="pizza">🍕</span> <span role="img" area-label="beer">🍻</span>
+          </p>
+        <p className="font-sans text-gray-primary py-1 md:text-xl">
+          Tambien cobro por dar asesoria profesional <span role="img" area-label="money">💰</span>
         </p>
         <p className="font-sans text-gray-primary py-1 md:text-xl">
           Son todo en mi vida{' '}
           <a
             href="https://twitter.com/heydisrrael"
             target="_blank"
+            rel="noopener noreferrer"
             className="no-underline text-blue-primary font-bold"
           >
             Heydy

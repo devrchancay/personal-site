@@ -9,7 +9,7 @@ const Header = () => (
         <span className="text-blue-primary mx-1">Ramón Chancay</span>
       </h1>
       <h2 className="text-gray-primary text-center text-xl font-bold md:text-3xl">
-        Front-end engineer ⚛️
+        Front-end engineer <span role="img" area-label="Reactjs">⚛️</span> <span role="img" area-label="Avion">✈️</span>
       </h2>
     </div>
     <div className="container flex justify-center">
@@ -20,6 +20,3 @@ const Header = () => (
 
 export default Header
 
-{
-  /* <div class="container flex justify-center" data-reactid="11"><a href="mailto:ramonchancayortega@gmail.com" class="btn bg-linear-blue text-white font-normal no-underline py-3 md:py-4 px-4 md:px-8 rounded-lg" data-reactid="12">Contactame</a></div> */
-}

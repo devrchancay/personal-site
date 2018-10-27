@@ -16,6 +16,7 @@ const Posts = ({ posts }) => (
           <a
             href={`https://medium.com/@devrchancay/${post.node.id}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="no-underline text-gray-primary"
           >
             <div>
