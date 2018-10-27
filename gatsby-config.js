@@ -10,6 +10,6 @@ module.exports = {
         username: `@devrchancay`,
       },
     },
-    `gatsby-plugin-react-next`,
+    // `gatsby-plugin-react-next`,
   ],
 }
