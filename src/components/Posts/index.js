@@ -1,5 +1,6 @@
 import React from 'react'
-import GraphImg from "graphcms-image";
+import GraphImg from 'graphcms-image'
+import helpers from '../../../helpers'
 
 const Posts = ({ posts }) => (
   <div className="flex flex-col justify-center items-center content-center py-8 md:w-full">
@@ -8,7 +9,7 @@ const Posts = ({ posts }) => (
         Ultimos posts
       </h2>
     </div>
-    
+
     <div className="container flex flex-col sm:justify-center md:flex-row items-center">
       {posts.map(post => (
         <div
@@ -16,13 +17,18 @@ const Posts = ({ posts }) => (
           className="flex flex-col mx-2 my-6 pb-3  w-5/6 md:w-1/3 relative border post-box"
         >
           <a
-            href={`https://medium.com/@devrchancay/${post.node.id}`}
-            target="_blank"
+            href={helpers.generateSlug(post.node)}
             rel="noopener noreferrer"
             className="no-underline text-gray-primary"
           >
             <div>
-                <GraphImg image={post.node.featuredImage} width={300} maxWidth={350} maxHeight={150} className="w-full" />
+              <GraphImg
+                image={post.node.featuredImage}
+                width={300}
+                maxWidth={350}
+                maxHeight={150}
+                className="w-full"
+              />
             </div>
             <div>
               <h4 className="font-sans font-bold px-2 py-4">

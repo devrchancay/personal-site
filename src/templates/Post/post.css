@@ -1,0 +1,87 @@
+[data-id='ramon-chancay-post'] * {
+  font-family: Source Sans Pro;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.84);
+}
+[data-id='ramon-chancay-post'] h1 {
+  font-weight: 600;
+  margin-top: 39px;
+  --x-height-multiplier: 0.342;
+  --baseline-multiplier: 0.22;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 42px;
+  margin-left: -2.63px;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  padding-top: 5px !important;
+}
+
+[data-id='ramon-chancay-post'] h3 {
+  font-weight: 600;
+  margin-top: 56px;
+  --x-height-multiplier: 0.342;
+  --baseline-multiplier: 0.22;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 34px;
+  margin-left: -2.13px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+[data-id='ramon-chancay-post'] h4 {
+  --x-height-multiplier: 0.342;
+  --baseline-multiplier: 0.22;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 26px;
+  margin-left: -1.63px;
+  line-height: 1.22;
+  letter-spacing: -0.012em;
+  margin-top: 30px;
+}
+
+[data-id='ramon-chancay-post'] p {
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+[data-id='ramon-chancay-post'] p > code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px 4px;
+  margin: 0 2px;
+}
+
+[data-id='ramon-chancay-post'] a,
+a:visited {
+  text-decoration: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.68) 50%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-repeat: repeat-x;
+  background-size: 2px 0.1em;
+  background-position: 0 1.07em;
+}
+
+[data-id='ramon-chancay-post'] pre {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+[data-id='ramon-chancay-post'] code {
+  word-break: break-word;
+}

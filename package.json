@@ -11,7 +11,8 @@
     "gatsby-source-graphcms": "^1.0.0-alpha.3",
     "graphcms-image": "^1.1.0-beta4",
     "react": "^16.6.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-markdown": "^4.0.3"
   },
   "keywords": [
     "gatsby"
