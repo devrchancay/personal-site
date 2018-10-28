@@ -21,10 +21,8 @@ const About = () => (
             className="no-underline text-blue-primary font-bold"
           >
             EveryMundo
-          </a>
-        </p>
-          <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Antes en{' '}
+          </a>{' '}
+          antes en{' '}
          <a
             href="https://www.eluniverso.com"
             className="no-underline text-blue-primary font-bold"
@@ -36,10 +34,10 @@ const About = () => (
           Disfruto de la construcción de cosas con código.
         </p>
         <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Organizador y Speaker en Meetups por pizza y cerveza.<span role="img" area-label="pizza">🍕</span> <span role="img" area-label="beer">🍻</span>
+          Organizador y Speaker por pizza y cerveza.<span role="img" area-label="pizza">🍕</span> <span role="img" area-label="beer">🍻</span>
           </p>
         <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Tambien cobro por dar asesoria profesional <span role="img" area-label="money">💰</span>
+          Si necesitas algo más profesional y sin memes. <span role="img" area-label="money">💰</span>
         </p>
         <p className="font-sans text-gray-primary py-1 md:text-xl">
           Son todo en mi vida{' '}
@@ -51,7 +49,7 @@ const About = () => (
           >
             Heydy
           </a>{' '}
-          y mis hijos.
+          y mis hijos. 👶 👧 
         </p>
       </div>
     </div>
