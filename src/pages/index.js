@@ -10,27 +10,29 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Header />
     <About />
-    <Posts posts={data.allMediumPost.edges} />
+    <Posts posts={data.latestsPosts.edges} />
     <Footer />
   </Layout>
 )
 
 export const query = graphql`
   query StoriesQuery {
-    allMediumPost(limit: 4) {
-      edges {
-        node {
+    latestsPosts: allPost(limit: 4){
+      edges{
+        node{
           id
-          title
-          virtuals {
-            subtitle
-            previewImage {
-              imageId
-            }
+          slug
+          featuredImage{
+            handle
+            width
+            height
           }
+          createdAt
+          title
+          body
         }
       }
-    }
+    } 
   }
 `
 

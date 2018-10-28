@@ -6,10 +6,27 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `@devrchancay`,
-      },
-    },
+      resolve: 'gatsby-source-graphcms',
+      options:{
+        endpoint: process.env.GRAPHQL_ENDPOINT,
+        token: process.env.GRAPHQL_TOKEN,
+        query: `
+        {
+          posts {
+            id
+            slug
+            title
+            featuredImage {
+              handle
+              width
+              height
+            }
+            body
+            createdAt
+          }
+        }
+        `
+      }
+    }
   ],
 }

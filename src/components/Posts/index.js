@@ -1,4 +1,5 @@
 import React from 'react'
+import GraphImg from "graphcms-image";
 
 const Posts = ({ posts }) => (
   <div className="flex flex-col justify-center items-center content-center py-8 md:w-full">
@@ -7,6 +8,7 @@ const Posts = ({ posts }) => (
         Ultimos posts
       </h2>
     </div>
+    
     <div className="container flex flex-col sm:justify-center md:flex-row items-center">
       {posts.map(post => (
         <div
@@ -20,14 +22,7 @@ const Posts = ({ posts }) => (
             className="no-underline text-gray-primary"
           >
             <div>
-              <img
-                src={`https://cdn-images-1.medium.com/max/300/${
-                  post.node.virtuals.previewImage.imageId
-                }`}
-                alt=""
-                className="w-full"
-                style={{ height: '180px' }}
-              />
+                <GraphImg image={post.node.featuredImage} width={300} maxWidth={350} maxHeight={150} className="w-full" />
             </div>
             <div>
               <h4 className="font-sans font-bold px-2 py-4">
