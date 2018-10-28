@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ramón Chancay Ortega (devrchancay) | Full Stack Developer',
+    title: 'Ramón Chancay Ortega (@devrchancay) | Front-end engineer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -10,6 +10,5 @@ module.exports = {
         username: `@devrchancay`,
       },
     },
-    // `gatsby-plugin-react-next`,
   ],
 }
