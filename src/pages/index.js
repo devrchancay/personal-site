@@ -1,17 +1,21 @@
 import React from 'react'
 import { graphql} from 'gatsby';
+
+
 import Layout from '../components/Layout'
 import Header from '../components/Header'
 import About from '../components/About'
 import Posts from '../components/Posts'
 import Footer from '../components/Footer/index'
 
-const IndexPage = ({ data }) => (
+
+
+const IndexPage = ({ data, pathContext }) => (
   <Layout>
-    <Header />
-    <About />
-    <Posts posts={data.allMediumPost.edges} />
-    <Footer />
+    <Header locale={pathContext.locale} />
+    <About locale={pathContext.locale} />
+    <Posts locale={pathContext.locale} posts={data.allMediumPost.edges} />
+    <Footer locale={pathContext.locale} />
   </Layout>
 )
 
@@ -34,4 +38,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default IndexPage;

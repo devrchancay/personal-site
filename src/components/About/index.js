@@ -1,7 +1,15 @@
 import React from 'react'
 import avatar from '../../images/avatar.svg'
 
-const About = () => (
+import enMessages from '../../locales/en/Home.json'
+import esMessages from '../../locales/es/Home.json'
+
+const messages = {
+  en: enMessages,
+  es: esMessages
+}
+
+const About = ({ locale }) => (
   <div className="bg-site-color flex flex-col md:flex-row-reverse justify-center items-center content-center py-8">
     <div className="container flex flex-col md:flex-row-reverse md:justify-around md:content-center md:items-center">
       <div className="px-6 sm:flex sm:justify-center sm:content-center sm:items-center">
@@ -9,48 +17,14 @@ const About = () => (
       </div>
       <div className="px-6 py-2">
         <h3 className="font-sans text-left text-gray-primary my-2 md:text-3xl md:my-4">
-          Ramón Chancay Ortega
+          {messages[locale].fullName}
         </h3>
-        <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Desarrollador web full stack en Guayaquil Ecuador.
-        </p>
-        <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Actualmente en{' '}
-          <a
-            href="https://www.everymundo.com"
-            className="no-underline text-blue-primary font-bold"
-          >
-            EveryMundo
-          </a>{' '}
-          antes en{' '}
-         <a
-            href="https://www.eluniverso.com"
-            className="no-underline text-blue-primary font-bold"
-          >
-            El Universo
-          </a>
-        </p>
-        <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Disfruto de la construcción de cosas con código.
-        </p>
-        <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Organizador y Speaker por pizza y cerveza.<span role="img" area-label="pizza">🍕</span> <span role="img" area-label="beer">🍻</span>
+
+        {messages[locale].about.map(item => (
+          <p className="font-sans text-gray-primary py-1 md:text-xl">
+            {item}
           </p>
-        <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Si necesitas algo más profesional y sin memes. <span role="img" area-label="money">💰</span>
-        </p>
-        <p className="font-sans text-gray-primary py-1 md:text-xl">
-          Son todo en mi vida{' '}
-          <a
-            href="https://twitter.com/heydisrrael"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="no-underline text-blue-primary font-bold"
-          >
-            Heydy
-          </a>{' '}
-          y mis hijos. 👶 👧 
-        </p>
+        ))}
       </div>
     </div>
   </div>

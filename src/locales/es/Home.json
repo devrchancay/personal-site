@@ -1,0 +1,14 @@
+{
+    "greeting": "Hola soy",
+    "name": "Ramón Chancay",
+    "position": "Front-end Engineer",
+    "fullName": "Ramón Chancay Ortega",
+    "about": [
+        "Front-end / Back-end Developer en Guayaquil Ecuador.",
+        "Actualmente en Everymundo, antes en El Universo.",
+        "Me gusta enseñar y compartir lo que sé.",
+        "Doy asesoramiento profesional a desarrolladores y empresas.",
+        "Mi esposa y mis hijos lo son todo en mi vida."
+    ],
+    "postTile": "Últimos posts"
+}
