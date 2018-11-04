@@ -1,10 +1,18 @@
 import React from 'react'
 
-const Posts = ({ posts }) => (
+import enMessages from '../../locales/en/Home'
+import esMessages from '../../locales/es/Home'
+
+const messages = {
+  en: enMessages,
+  es: esMessages
+}
+
+const Posts = ({ posts, locale }) => (
   <div className="flex flex-col justify-center items-center content-center py-8 md:w-full">
     <div className="container">
       <h2 className="font-sans font-bold text-center md:text-left text-gray-primary mx-2">
-        Ultimos posts
+        {messages[locale].postTile}
       </h2>
     </div>
     <div className="container flex flex-col sm:justify-center md:flex-row items-center">

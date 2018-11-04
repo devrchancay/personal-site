@@ -1,8 +1,8 @@
 import React from 'react'
 import avatar from '../../images/avatar.svg'
 
-import enMessages from '../../locales/en/Home.json'
-import esMessages from '../../locales/es/Home.json'
+import enMessages from '../../locales/en/Home'
+import esMessages from '../../locales/es/Home'
 
 const messages = {
   en: enMessages,
@@ -20,10 +20,8 @@ const About = ({ locale }) => (
           {messages[locale].fullName}
         </h3>
 
-        {messages[locale].about.map(item => (
-          <p className="font-sans text-gray-primary py-1 md:text-xl">
-            {item}
-          </p>
+        {messages[locale].about.map((item, key) => (
+          <p key={key} className="font-sans text-gray-primary py-1 md:text-xl" dangerouslySetInnerHTML={{__html : item }} />
         ))}
       </div>
     </div>

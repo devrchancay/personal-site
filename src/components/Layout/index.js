@@ -4,17 +4,23 @@ import Helmet from 'react-helmet'
 
 import './index.css'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, locale }) => (
   <div>
+    
     <Helmet
-      title="Ramón Chancay (devrchancay) | Full Stack Developer"
+      title="Ramón Chancay (devrchancay) | Front-end Developer"
       meta={[
         {
           name: 'description',
           content:
-            'Desarrollador Web Full stack, en Guayaquil, Ecuador. Disponible para contratos freelancer.',
+            'Front-end web Developer, en Guayaquil, Ecuador',
         },
       ]}
+      link={[{
+        rel: 'alternate',
+        hreflang: locale ==='es' ? 'en': 'es',
+        href:`https://ramonchancay.me/${locale === 'es' ? '' : 'es'}`
+      }]}
     />
 
     <div>{children}</div>
@@ -22,7 +28,7 @@ const TemplateWrapper = ({ children }) => (
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.array,
 }
 
 export default TemplateWrapper

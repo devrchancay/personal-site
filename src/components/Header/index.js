@@ -1,7 +1,7 @@
 import React from 'react'
 import Social from '../Common/Social'
-import enMessages from '../../locales/en/Home.json'
-import esMessages from '../../locales/es/Home.json'
+import enMessages from '../../locales/en/Home'
+import esMessages from '../../locales/es/Home'
 
 const messages = {
   en: enMessages,
@@ -16,7 +16,8 @@ const Header = ({ locale }) => (
         <span className="text-blue-primary mx-1">{messages[locale].name}</span>
       </h1>
       <h2 className="text-gray-primary text-center text-xl font-bold md:text-3xl">
-        {messages[locale].position} <span role="img" area-label="Reactjs">⚛️</span> <span role="img" area-label="Avion">✈️</span>
+        {messages[locale].position} {' '} 
+         <span role="img" aria-label="Reactjs">⚛️</span> 
       </h2>
     </div>
     <div className="container flex justify-center">
