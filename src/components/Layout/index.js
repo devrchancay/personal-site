@@ -15,6 +15,10 @@ const TemplateWrapper = ({ children, locale }) => (
           content:
             'Front-end web Developer, en Guayaquil, Ecuador',
         },
+        {
+          name:"google-site-verification",
+          content:"qfo-VGdgzZ0EDTyPppoUP5rcehoyj_Nfzfp4FigvR7g"
+        }
       ]}
       link={[{
         rel: 'alternate',
