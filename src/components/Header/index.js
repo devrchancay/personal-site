@@ -5,19 +5,23 @@ import esMessages from '../../locales/es/Home'
 
 const messages = {
   en: enMessages,
-  es: esMessages
+  es: esMessages,
 }
 
 const Header = ({ locale }) => (
-  <div className="bg-white flex justify-center py-8 flex-col font-sans content-center items-center md:h-160">
-    <div className="container py-8 flex flex-col items-center content-center md:justify-start sm:justify-center">
+  <div className="bg-white flex justify-center py-8 flex-col font-sans content-center items-center md:h-80">
+    <div className="container py-4 flex flex-col items-center content-center md:justify-start sm:justify-center">
       <h1 className="my-4 text-center flex flex-col md:flex-row text-4xl md:text-6xl text-animation">
-        <span className="text-gray-primary mx-1">{messages[locale].greeting}</span>
+        <span className="text-gray-primary mx-1">
+          {messages[locale].greeting}
+        </span>
         <span className="text-blue-primary mx-1">{messages[locale].name}</span>
       </h1>
       <h2 className="text-gray-primary text-center text-xl font-bold md:text-3xl">
-        {messages[locale].position} {' '} 
-         <span role="img" aria-label="Reactjs">⚛️</span> 
+        {messages[locale].position}{' '}
+        <span role="img" aria-label="Reactjs">
+          ⚛️
+        </span>
       </h2>
     </div>
     <div className="container flex justify-center">
@@ -27,4 +31,3 @@ const Header = ({ locale }) => (
 )
 
 export default Header
-
