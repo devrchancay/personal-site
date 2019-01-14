@@ -9,9 +9,13 @@ const Lang = ({ locale }) => (
         to={locale === 'es' ? '/en' : '/'}
       >
         {locale === 'es' ? (
-          <span aria-label="English version">🇺🇸</span>
+          <span role="img" aria-label="English version">
+            🇺🇸
+          </span>
         ) : (
-          <span aria-label="English version">🇪🇸</span>
+          <span role="img" aria-label="English version">
+            🇪🇸
+          </span>
         )}{' '}
         <span className="text-white">
           {locale === 'es' ? 'English Version' : 'Version en español'}
