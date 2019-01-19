@@ -20,7 +20,7 @@ const Menu = ({ locale }) => {
       <li className="px-2">
         <Link
           className="text-gray-primary hover:text-blue-primary"
-          to={`${path}/about`}
+          to={`/about/${path}`}
         >
           {messages[locale].about.label}
         </Link>
