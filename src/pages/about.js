@@ -5,9 +5,9 @@ import Menu from '../components/Header/menu'
 import Header from '../components/AboutPage/Header'
 import About from '../components/AboutPage/About'
 
-const AboutPage = ({ pathContext }) => (
+const AboutPage = ({ location, pathContext }) => (
   <Layout locale={pathContext.locale}>
-    <Lang locale={pathContext.locale} />
+    <Lang pathname={location.pathname} locale={pathContext.locale} />
     <Menu locale={pathContext.locale} />
     <Header locale={pathContext.locale} />
     <About locale={pathContext.locale} />

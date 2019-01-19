@@ -9,16 +9,18 @@ import Footer from '../components/Footer/index'
 import Menu from '../components/Header/menu'
 import Lang from '../components/Header/lang'
 
-const IndexPage = ({ data, pathContext }) => (
-  <Layout locale={pathContext.locale}>
-    <Lang locale={pathContext.locale} />
-    <Menu locale={pathContext.locale} />
-    <Header locale={pathContext.locale} />
-    <About locale={pathContext.locale} />
-    <Posts locale={pathContext.locale} posts={data.allMediumPost.edges} />
-    <Footer locale={pathContext.locale} />
-  </Layout>
-)
+const IndexPage = ({ pathContext, data, location }) => {
+  return (
+    <Layout locale={pathContext.locale}>
+      <Lang pathname={location.pathname} locale={pathContext.locale} />
+      <Menu locale={pathContext.locale} />
+      <Header locale={pathContext.locale} />
+      <About locale={pathContext.locale} />
+      <Posts locale={pathContext.locale} posts={data.allMediumPost.edges} />
+      <Footer locale={pathContext.locale} />
+    </Layout>
+  )
+}
 
 export const query = graphql`
   query StoriesQuery {

@@ -7,19 +7,18 @@ exports.onCreatePage = ({ page, actions }) => {
     deletePage(page)
 
     Object.keys(locales).map(lang => {
-
       const localizedPath = locales[lang].default
         ? page.path
-        : locales[lang].path + page.path
-      
-      console.log('*** PAGE ***', localizedPath);
+        : page.path + locales[lang].path
+
+      console.log('*** PAGE ***', localizedPath)
 
       return createPage({
         ...page,
         path: localizedPath,
         context: {
-          locale: lang
-        }
+          locale: lang,
+        },
       })
     })
 
