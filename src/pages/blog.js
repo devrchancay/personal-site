@@ -14,35 +14,38 @@ class BlogIndex extends React.Component {
     return (
       <BlogLayout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
+          title="Todos los post"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title;
-          return (
-            <Link className="no-underline" to={node.frontmatter.path}>
-              <div
-                className="w-full md:w-2/3 md:px-0 md:mx-auto p-4 blogList"
-                key={node.frontmatter.path}
-              >
-                <h3 className="font-sans my-1">
-                  <Link to={node.frontmatter.path}>{title}</Link>
-                </h3>
-                <p
-                  className="py-2 text-gray-primary"
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
+        <div className="py-8">
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title;
+            return (
+              <Link className="no-underline" to={node.frontmatter.path}>
+                <div
+                  className="w-full md:w-2/3 md:px-0 md:mx-auto p-4 blogList"
+                  key={node.frontmatter.path}
+                >
+                  <h3 className="font-sans my-1">
+                    <Link to={node.frontmatter.path}>{title}</Link>
+                  </h3>
+                  <p
+                    className="py-2 text-gray-primary"
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
 
-                <span className="text-gray-primary">
-                  Published on <small>{node.frontmatter.date}</small>
-                </span>
-              </div>
-            </Link>
-          );
-        })}
+                  <span className="text-gray-primary">
+                    <small>Publicado en</small>{' '}
+                    <small>{node.frontmatter.date}</small>
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </BlogLayout>
     );
   }

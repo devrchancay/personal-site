@@ -1,20 +1,24 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
 import SEO from '../components/seo';
+import Image from '../images/404.svg';
 
 class NotFoundPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <>
         <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
+        <div className="w-2/3 mx-auto my-0 flex flex-col justify-center items-center content-center pt-6">
+          <h1 className="text-center py-4">
+            Oh no... lo que buscas no esta aqui
+          </h1>
+          <img alt="Not Found" className="w-2/3" src={Image} />
+        </div>
+        <p className="text-center">
+          ps: Si buscas algo de php que Dios te perdone
+        </p>
+      </>
     );
   }
 }

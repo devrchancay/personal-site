@@ -3,7 +3,7 @@ module.exports = {
     title: `Blog`,
     author: `Ramón Chancay`,
     description: `Escribo cosas de frontend/backend y publico mi trabajo para que me contraten`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://ramonchancay.me/`,
     social: {
       twitter: `devrchancay`,
     },
@@ -50,20 +50,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-119581279-2`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
+        name: `Ramon Chancay | Blog`,
+        short_name: `Blog`,
+        start_url: `/blog`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        theme_color: `#6c63ff`,
+        display: `fullscreen`,
+        icon: `content/assets/profile.jpg`,
       },
     },
     `gatsby-plugin-offline`,

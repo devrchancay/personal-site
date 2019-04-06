@@ -26,11 +26,15 @@ function Bio() {
               }}
             />
             <p className="font-sans my-2">
-              Written by <strong>{author}</strong>
+              Escrito por <strong>{author}</strong>
             </p>
             <p>
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://twitter.com/${social.twitter}`}
+              >
+                Me puedes seguir en twitter
               </a>
             </p>
           </div>

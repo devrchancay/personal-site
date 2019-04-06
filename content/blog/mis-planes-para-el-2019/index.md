@@ -54,7 +54,7 @@ Llevo como 3 años deseando lo mismo, me gustaría mucho ser el primer Google De
 
 Hace poco [aceptaron a Elian en la escuela](https://www.instagram.com/p/BqM9b9fBXyh/) y lo ubicaron en inicial 2, nunca antes a ido a la escuela, guardería o cosas de estimulación pero la televisión lo a educado bien. conoce colores, números y ciertas cosas lógicas es autodidacta como su padre 🤓
 
-### Viajar, Viajar y Viajar ✈️
+#### Viajar, Viajar y Viajar ✈️
 
 Intentare aprovechar la vacaciones de la escuela para conocer más Ecuador y por qué no otros países, puedo trabajar desde cualquier parte del mundo because yolo. ( si tiene conexión a internet )
 

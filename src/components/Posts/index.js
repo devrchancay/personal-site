@@ -13,7 +13,7 @@ const Posts = ({ posts }) => (
       {posts.map(post => (
         <div
           key={post.node.id}
-          className="flex flex-col mx-2 my-6 pb-3  w-5/6 md:w-1/3 relative border post-box"
+          className="flex flex-col mx-2 my-6 pb-3  w-5/6 md:w-1/3 relative border post-box "
         >
           <Link
             to={post.node.frontmatter.path}
@@ -25,10 +25,13 @@ const Posts = ({ posts }) => (
               <Image
                 sizes={post.node.frontmatter.image.childImageSharp.sizes}
                 className="w-full"
+                imgStyle={{
+                  height: '180px',
+                }}
               />
             </div>
             <div>
-              <h4 className="font-sans font-bold px-2 py-4">
+              <h4 className="font-sans text-sm font-bold px-2 py-4">
                 {post.node.frontmatter.title}
               </h4>
             </div>

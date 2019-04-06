@@ -1,5 +1,7 @@
 import React from 'react';
 import Menu from '../Header/menu';
+import Footer from '../Footer';
+
 import './tailwind.css';
 
 const BlogLayout = ({ children }) => {
@@ -9,11 +11,7 @@ const BlogLayout = ({ children }) => {
         <Menu />
       </header>
       <main>{children}</main>
-      <footer className="text-center p-6">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </div>
   );
 };
