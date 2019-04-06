@@ -37,7 +37,7 @@ class BlogIndex extends React.Component {
                 />
 
                 <span className="text-gray-primary">
-                  Publicado en <small>{node.frontmatter.date}</small>
+                  Published on <small>{node.frontmatter.date}</small>
                 </span>
               </div>
             </Link>
