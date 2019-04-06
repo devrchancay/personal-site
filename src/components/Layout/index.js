@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from '../Header/menu';
-import './src/components/Layout/tailwind.css';
+import './tailwind.css';
 
 const BlogLayout = ({ children }) => {
   return (
