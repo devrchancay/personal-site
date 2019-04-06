@@ -3,7 +3,6 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Menu from '../components/Header/menu';
 import Header from '../components/Header';
 import About from '../components/About';
 import Posts from '../components/Posts';
