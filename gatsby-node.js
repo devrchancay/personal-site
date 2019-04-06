@@ -1,27 +1,78 @@
-const locales = require('./src/locales')
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
-  return new Promise(resolve => {
-    deletePage(page)
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                path
+              }
+            }
+          }
+        }
+      }
+    `,
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors;
+    }
 
-    Object.keys(locales).map(lang => {
-      const localizedPath = locales[lang].default
-        ? page.path
-        : page.path + locales[lang].path
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges;
 
-      console.log('*** PAGE ***', localizedPath)
+    posts.forEach((post, index) => {
+      const previous =
+        index === posts.length - 1 ? null : posts[index + 1].node;
+      const next = index === 0 ? null : posts[index - 1].node;
 
-      return createPage({
-        ...page,
-        path: localizedPath,
+      createPage({
+        path: post.node.frontmatter.path,
+        component: blogPost,
         context: {
-          locale: lang,
+          slug: post.node.fields.slug,
+          previous,
+          next,
         },
-      })
-    })
+      });
+    });
 
-    resolve()
-  })
-}
+    return null;
+  });
+};
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
+  }
+};
+
+exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
+  const config = getConfig();
+  if (stage.startsWith('develop') && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-dom': '@hot-loader/react-dom',
+    };
+  }
+};

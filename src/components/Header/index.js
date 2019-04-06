@@ -1,24 +1,15 @@
-import React from 'react'
-import Social from '../Common/Social'
-import enMessages from '../../locales/en/Home'
-import esMessages from '../../locales/es/Home'
+import React from 'react';
+import Social from '../Common/Social';
 
-const messages = {
-  en: enMessages,
-  es: esMessages,
-}
-
-const Header = ({ locale }) => (
+const Header = () => (
   <div className="bg-white flex justify-center py-8 flex-col font-sans content-center items-center md:h-80">
     <div className="container py-4 flex flex-col items-center content-center md:justify-start sm:justify-center">
       <h1 className="my-4 text-center flex flex-col md:flex-row text-4xl md:text-6xl text-animation">
-        <span className="text-gray-primary mx-1">
-          {messages[locale].greeting}
-        </span>
-        <span className="text-blue-primary mx-1">{messages[locale].name}</span>
+        <span className="text-gray-primary mx-1">Hello I'm</span>
+        <span className="text-blue-primary mx-1">Ramón Chancay</span>
       </h1>
       <h2 className="text-gray-primary text-center text-xl font-bold md:text-3xl">
-        {messages[locale].position}{' '}
+        Front-end Engineer{' '}
         <span role="img" aria-label="Reactjs">
           ⚛️
         </span>
@@ -28,6 +19,6 @@ const Header = ({ locale }) => (
       <Social />
     </div>
   </div>
-)
+);
 
-export default Header
+export default Header;

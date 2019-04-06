@@ -1,38 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import { Link } from 'gatsby';
+import Menu from '../Header/menu';
 
-import './index.css'
+const BlogLayout = ({ location, title, children }) => {
+  const rootPath = `${__PATH_PREFIX__}/blog/`;
+  let header;
 
-const TemplateWrapper = ({ children, locale }) => (
-  <div>
-    
-    <Helmet
-      title="Ramón Chancay (devrchancay) | Front-end Developer"
-      meta={[
-        {
-          name: 'description',
-          content:
-            'Front-end web Developer, en Guayaquil, Ecuador',
-        },
-        {
-          name:"google-site-verification",
-          content:"qfo-VGdgzZ0EDTyPppoUP5rcehoyj_Nfzfp4FigvR7g"
-        }
-      ]}
-      link={[{
-        rel: 'alternate',
-        hreflang: locale ==='es' ? 'en': 'es',
-        href:`https://ramonchancay.me/${locale === 'es' ? '' : 'es'}`
-      }]}
-    />
+  return (
+    <div>
+      <header className="w-full">
+        <Menu />
+      </header>
+      <main>{children}</main>
+      <footer className="text-center p-6">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+    </div>
+  );
+};
 
-    <div>{children}</div>
-  </div>
-)
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.array,
-}
-
-export default TemplateWrapper
+export default BlogLayout;

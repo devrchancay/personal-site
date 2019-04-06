@@ -1,36 +1,65 @@
 {
-  "name": "young-starter-kit",
-  "description": "Gatsby starter kit",
-  "version": "1.0.0",
-  "author": "Ramón Chancay <ramonchancayortega@gmail.com>",
-  "dependencies": {
-    "gatsby": "^2.0.31",
-    "gatsby-plugin-offline": "^2.0.9",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-source-graphcms": "^1.0.0-alpha.3",
-    "i18next": "^12.0.0",
-    "i18next-browser-languagedetector": "^2.2.3",
-    "i18next-xhr-backend": "^1.5.1",
-    "react": "^16.6.0",
-    "react-helmet": "^5.2.0",
-    "react-i18next": "^8.3.5"
+  "name": "gatsby-starter-blog",
+  "private": true,
+  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
+  "dependencies": {
+    "gatsby": "^2.3.5",
+    "gatsby-image": "^2.0.37",
+    "gatsby-plugin-feed": "^2.1.0",
+    "gatsby-plugin-google-analytics": "^2.0.18",
+    "gatsby-plugin-manifest": "^2.0.26",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.11",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-typography": "^2.2.10",
+    "gatsby-remark-copy-linked-files": "^2.0.11",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.2.6",
+    "gatsby-remark-responsive-iframe": "^2.1.1",
+    "gatsby-remark-smartypants": "^2.0.9",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prismjs": "^1.16.0",
+    "purgecss": "^1.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.19",
+    "tailwindcss": "^0.7.4",
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.54",
+    "typeface-open-sans": "^0.0.54",
+    "typography": "^0.16.19",
+    "typography-theme-us-web-design-standards": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
+  },
+  "devDependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
+    "prettier": "^1.16.4"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/index.css && purgecss -c purgecss.config.js -o ./src/components/Layout && gatsby build",
-    "develop": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/index.css && gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/index.css"
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
-  "devDependencies": {
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-source-medium": "^1.0.14",
-    "prettier": "^1.14.1",
-    "purgecss": "^0.21.0",
-    "tailwindcss": "^0.5.2"
+  "scripts": {
+    "build": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css && purgecss -c purgecss.config.js -o ./src/components/Layout && gatsby build",
+    "develop": "gatsby develop",
+    "tailwind": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   }
 }

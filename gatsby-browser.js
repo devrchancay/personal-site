@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// custom typefaces
 
- // You can delete this file if you're not using it
+import 'typeface-open-sans';
+import 'prismjs/themes/prism.css';
+import './src/components/Layout/tailwind.css';

@@ -1,44 +1,49 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
 
-import Layout from '../components/Layout'
-import Header from '../components/Header'
-import About from '../components/About'
-import Posts from '../components/Posts'
-import Footer from '../components/Footer/index'
-import Menu from '../components/Header/menu'
-import Lang from '../components/Header/lang'
+import { graphql, StaticQuery } from 'gatsby';
 
-const IndexPage = ({ pathContext, data, location }) => {
-  return (
-    <Layout locale={pathContext.locale}>
-      <Lang pathname={location.pathname} locale={pathContext.locale} />
-      <Menu locale={pathContext.locale} />
-      <Header locale={pathContext.locale} />
-      <About locale={pathContext.locale} />
-      <Posts locale={pathContext.locale} posts={data.allMediumPost.edges} />
-      <Footer locale={pathContext.locale} />
-    </Layout>
-  )
-}
+import Layout from '../components/Layout';
+import Menu from '../components/Header/menu';
+import Header from '../components/Header';
+import About from '../components/About';
+import Posts from '../components/Posts';
 
-export const query = graphql`
-  query StoriesQuery {
-    allMediumPost(limit: 4) {
-      edges {
-        node {
-          id
-          title
-          virtuals {
-            subtitle
-            previewImage {
-              imageId
+const Index = () => (
+  <StaticQuery
+    query={graphql`
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 4
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                path
+                image {
+                  id
+                  childImageSharp {
+                    sizes(maxWidth: 400) {
+                      ...GatsbyImageSharpSizes_withWebp
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
-    }
-  }
-`
+    `}
+    render={data => (
+      <Layout>
+        <Header />
+        <About />
+        <Posts posts={data.allMarkdownRemark.edges} />
+      </Layout>
+    )}
+  />
+);
 
-export default IndexPage
+export default Index;

@@ -1,14 +1,14 @@
 module.exports = {
   content: ['./public/**/*.html', './src/**/*.js'],
-  css: ['./src/components/Layout/index.css'],
+  css: ['./src/components/Layout/tailwind.css'],
   extractors: [
     {
       extractor: class {
         static extract(content) {
-          return content.match(/[A-z0-9-:\/]+/g)
+          return content.match(/[A-z0-9-:\/]+/g);
         }
       },
       extensions: ['html', 'js'],
     },
   ],
-}
+};
