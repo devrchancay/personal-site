@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Menu from '../Header/menu';
+import './src/components/Layout/tailwind.css';
 
-const BlogLayout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/blog/`;
-  let header;
-
+const BlogLayout = ({ children }) => {
   return (
     <div>
       <header className="w-full">

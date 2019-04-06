@@ -54,8 +54,9 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css && purgecss -c purgecss.config.js -o ./src/components/Layout && gatsby build",
+    "build": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css && npm run purge:css && gatsby build",
     "develop": "gatsby develop",
+    "purge:css": "purgecss -c purgecss.config.js -o ./src/components/Layout",
     "tailwind": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
