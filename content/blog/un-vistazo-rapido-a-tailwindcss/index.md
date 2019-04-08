@@ -3,6 +3,7 @@ path: '/blog/2018/06/25/un-vistazo-rapido-a-tailwindcss'
 image: './hero.jpg'
 title: 'Un vistazo rápido a Tailwindcss'
 date: '2018-06-25T02:04:20.769Z'
+topic: 'CSS'
 ---
 
 [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) es un framework para el desarrollo de interfaces personalizadas de forma rápida, a diferencia de bootstrap, foundation, semantic-ui, bulmacss y similares que te proveen abstracciones habituales tipo botones, cards, menus, formularios.

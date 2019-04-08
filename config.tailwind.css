@@ -17,7 +17,8 @@
   }
   .post-box {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 30px;
-    max-height: 250px;
+    /* min-height: 220px; */
+    border-radius: 6px;
   }
 }
 

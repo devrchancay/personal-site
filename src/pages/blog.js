@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
-import BlogLayout from '../components/Layout';
+import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
 class BlogIndex extends React.Component {
@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <BlogLayout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Todos los post"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -46,7 +46,7 @@ class BlogIndex extends React.Component {
             );
           })}
         </div>
-      </BlogLayout>
+      </Layout>
     );
   }
 }

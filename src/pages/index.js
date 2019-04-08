@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import About from '../components/About';
 import Posts from '../components/Posts';
+import SEO from '../components/seo';
 
 const Index = () => (
   <StaticQuery
@@ -18,17 +19,12 @@ const Index = () => (
           edges {
             node {
               id
+              excerpt(pruneLength: 85)
               frontmatter {
                 title
                 path
-                image {
-                  id
-                  childImageSharp {
-                    sizes(maxWidth: 400) {
-                      ...GatsbyImageSharpSizes_withWebp
-                    }
-                  }
-                }
+                date(formatString: "MMMM DD, YYYY")
+                topic
               }
             }
           }
@@ -37,6 +33,16 @@ const Index = () => (
     `}
     render={data => (
       <Layout>
+        <SEO
+          title="Ramón Chancay (@devrchancay) | Front-end Developer and Educator"
+          keywords={[
+            `freelance`,
+            `gatsby`,
+            `javascript`,
+            `react`,
+            `javascript courses`,
+          ]}
+        />
         <Header />
         <About />
         <Posts posts={data.allMarkdownRemark.edges} />
