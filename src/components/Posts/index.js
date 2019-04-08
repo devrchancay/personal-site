@@ -28,14 +28,14 @@ const Posts = ({ posts }) => {
                 <h3 className="font-sans w-5/6 font-bold font-sans pb-1">
                   {node.frontmatter.title}
                 </h3>
-                <p className="pt-3 pr-4 text-sm text-gray-primary">
+                <p className="font-serif pt-3 pr-4 text-sm text-gray-primary">
                   {node.frontmatter.description || node.excerpt}
                 </p>
                 <div className="pt-4">
                   <small>
                     <span role="img" aria-labelledby="date">
                       📅
-                    </span>
+                    </span>{" "}
                     {node.frontmatter.date}
                   </small>
                 </div>
