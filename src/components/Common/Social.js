@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Social = () => (
   <ul className="list-reset flex">
     <li className="w-12 px-2 flex justify-center">
-      <a href="https://twitter.com/devrchancay" rel="noopener noreferrer" target="_blank">
+      <a
+        href="https://twitter.com/devrchancay"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img
           alt="Twitter"
           className="w-full"
@@ -12,7 +16,11 @@ const Social = () => (
       </a>
     </li>
     <li className="w-12 px-2 flex justify-center">
-      <a href="https://facebook.com/devrchancay13" rel="noopener noreferrer" target="_blank">
+      <a
+        href="https://facebook.com/devrchancay13"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img
           alt="facebook"
           className="w-full"
@@ -21,7 +29,11 @@ const Social = () => (
       </a>
     </li>
     <li className="w-12 px-2 flex justify-center">
-      <a href="https://www.linkedin.com/in/devrchancay" rel="noopener noreferrer" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/devrchancay"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img
           alt="linkedin"
           className="w-full"
@@ -30,12 +42,11 @@ const Social = () => (
       </a>
     </li>
     <li className="w-12 px-2 flex justify-center">
-      <a href="https://medium.com/@devrchancay" rel="noopener noreferrer" target="_blank">
-        <img alt="Medium" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTExLjk4MSwxMTguNTA5Yy0wLjEzNS0yLjk1Ni0xLjg5Mi01LjcyNi00LjU2NS03LjA0bC0xNTkuMjQtNzkuNjJjLTMuNzc2LTEuODg3LTguMzYzLTAuNjQtMTAuNjY0LDIuODk4ICAgIEwyMjkuOTE2LDIwMC4yODJsLTU1LjQxMy04NS44OTFjLTAuNzk2LTEuMjM1LTEuOTQ1LTIuMjY0LTMuMjU5LTIuOTIybC0xNTkuMjQtNzkuNjJDNi41ODIsMjkuMTM4LDAsMzMuMjE4LDAsMzkuMjY4djc5LjYyMSAgICBjMCw0LjU4MSwzLjcxMiw4LjI5NCw4LjI5NCw4LjI5NGM0LjU4MSwwLDguMjk0LTMuNzEyLDguMjk0LTguMjk0VjUyLjY4N2wxNDIuNjUyLDcxLjMyNnYzMzUuMzJMMTYuNTg3LDM4OC4wMDhWMTU0LjI3NyAgICBjMC00LjU4MS0zLjcxMi04LjI5NC04LjI5NC04LjI5NGMtNC41ODEsMC04LjI5NCwzLjcxMi04LjI5NCw4LjI5NHYyMzguODU3YzAsMy4xNDIsMS43NzUsNi4wMTMsNC41ODUsNy40MThsMTU5LjI0LDc5LjYyICAgIGM1LjQyNywyLjcxNCwxMi4wMDMtMS4zNzUsMTIuMDAzLTcuNDE4VjMxOC4wODdsMzI0LjE3LDE2Mi4wODVjNS40MjcsMi43MTQsMTIuMDAzLTEuMzc1LDEyLjAwMy03LjQxOFYxMTguODg4ICAgIEM1MTIsMTE4Ljc2LDUxMS45ODcsMTE4LjYzNiw1MTEuOTgxLDExOC41MDl6IE0xNzUuODI3LDI5OS41NDF2LTE1Mi41bDE0NS4yMzksMjI1LjEyTDE3NS44MjcsMjk5LjU0MXogTTQ5NS40MTMsNDU5LjMzNSAgICBsLTEzOS4zNC02OS42NzFsMTA4LjU3Ni0xODYuOTkzYzIuMjk5LTMuOTYxLDAuOTUyLTkuMDM3LTMuMDA5LTExLjMzN2MtMy45Ni0yLjI5OC05LjAzNi0wLjk1My0xMS4zMzcsMy4wMDlMMzQ0LjA5NCwzNzcuMjU4ICAgIEwyMzkuNzcsMjE1LjU1NUwzNDcuMzgzLDQ5Ljk5OGwxNDQuNzE3LDcyLjM1OWwtMjYuMzg3LDQ1LjQ0NmMtMi4yOTksMy45NjEtMC45NTIsOS4wMzcsMy4wMDksMTEuMzM3ICAgIGMzLjk1OCwyLjI5Nyw5LjAzNSwwLjk1MywxMS4zMzctMy4wMDlsMTUuMzU0LTI2LjQ0M1Y0NTkuMzM1eiIgZmlsbD0iIzQ4YzZlZiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
-      </a>
-    </li>
-    <li className="w-12 px-2 flex justify-center">
-      <a href="https://github.com/devrchancay" rel="noopener noreferrer" target="_blank">
+      <a
+        href="https://github.com/devrchancay"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img
           alt="Github"
           className="w-full"
@@ -46,10 +57,13 @@ const Social = () => (
 
     <li className="w-12 px-2 flex justify-center">
       <a rel="noopener noreferrer" href="mailto:ramonchancayortega@gmail.com">
-        <img alt="Email" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ1Mi44NCA0NTIuODQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ1Mi44NCA0NTIuODQiIHdpZHRoPSIxMjhweCIgaGVpZ2h0PSIxMjhweCI+CiAgPGc+CiAgICA8cGF0aCBkPSJtNDQ5LjQ4MywxOTAuNGwuMDAxLS4wMDEtNTcuODI0LTM4LjMzNXYtMTI4LjEzNGMwLTQuMTQyLTMuMzU4LTcuNS03LjUtNy41aC0zMTUuNDljLTQuMTQyLDAtNy41LDMuMzU4LTcuNSw3LjV2MTI4LjE0M2wtNTcuODE0LDM4LjMyNiAuMDAxLC4wMDJjLTIuMDIyLDEuMzQzLTMuMzU3LDMuNjM5LTMuMzU3LDYuMjQ5djIzMi4yNmMwLDQuMTQyIDMuMzU4LDcuNSA3LjUsNy41aDQzNy44NGM0LjE0MiwwIDcuNS0zLjM1OCA3LjUtNy41di0yMzIuMjZjMC0yLjYxLTEuMzM1LTQuOTA2LTMuMzU3LTYuMjV6bS0zODguMzEzLDI2LjIyOWwtMjMuNTI1LTEyLjQ3OWgyMy41MjV2MTIuNDc5em0tNDYuMTctNy41MTFsMTcyLjQ3NSw5MS40OS0xNzIuNDc1LDExNC4zMjd2LTIwNS44MTd6bTIxMS40MTcsODMuNjcxbDE5NC4wMzcsMTI4LjYyMWgtMzg4LjA3M2wxOTQuMDM2LTEyOC42MjF6bTM4Ljk0NSw3LjgybDE3Mi40NzctOTEuNDkxdjIwNS44MjFsLTE3Mi40NzctMTE0LjMzem0xMjYuMjk4LTk2LjQ1OWgyMy41MzZsLTIzLjUzNiwxMi40ODR2LTEyLjQ4NHptMjguNzk0LTE1aC0yOC43OTR2LTE5LjA5bDI4Ljc5NCwxOS4wOXptLTQzLjc5NC0xNTcuNzJ2MTkzLjE2MWwtMTI1LjUyNyw2Ni41ODYtMjAuNTczLTEzLjYzN2MtMi41MTEtMS42NjUtNS43NzYtMS42NjUtOC4yODcsMGwtMjAuNTcsMTMuNjM1LTEyNS41MzMtNjYuNTg5di0xOTMuMTU2aDMwMC40OXptLTMxNS40OSwxNTcuNzJoLTI4Ljc4MmwyOC43ODItMTkuMDh2MTkuMDh6IiBmaWxsPSIjMzQ4YWM3Ii8+CiAgICA8cGF0aCBkPSJtMjI2LjQxNSwyMTMuNjcxaDU5Ljc1NGM0LjE0MiwwIDcuNS0zLjM1OCA3LjUtNy41cy0zLjM1OC03LjUtNy41LTcuNWgtNTkuNzU0Yy0yOC44MTMsMC01Mi4yNTQtMjMuNDQxLTUyLjI1NC01Mi4yNTR2LTIuMjEzYzAtMjguODEzIDIzLjQ0MS01Mi4yNTQgNTIuMjU0LTUyLjI1NHM1Mi4yNTQsMjMuNDQxIDUyLjI1NCw1Mi4yNTR2NS41MzNjMCw2LjIzNy01LjA3NCwxMS4zMTItMTEuMzEyLDExLjMxMnMtMTEuMzEyLTUuMDc0LTExLjMxMi0xMS4zMTJ2LTEwLjUxMmMwLTE3Ljg2NC0xNC41MzMtMzIuMzk4LTMyLjM5Ny0zMi4zOThzLTMyLjM5NywxNC41MzMtMzIuMzk3LDMyLjM5OGMwLDE3Ljg2NCAxNC41MzMsMzIuMzk3IDMyLjM5NywzMi4zOTcgOC4xNjksMCAxNS42MzYtMy4wNDUgMjEuMzQtOC4wNTIgNC42NDQsNy40ODMgMTIuOTMyLDEyLjQ3OCAyMi4zNjksMTIuNDc4IDE0LjUwOCwwIDI2LjMxMi0xMS44MDMgMjYuMzEyLTI2LjMxMnYtNS41MzNjMC0zNy4wODQtMzAuMTctNjcuMjU0LTY3LjI1NC02Ny4yNTRzLTY3LjI1NCwzMC4xNy02Ny4yNTQsNjcuMjU0djIuMjEzYzUuNjg0MzRlLTE0LDM3LjA4NSAzMC4xNyw2Ny4yNTUgNjcuMjU0LDY3LjI1NXptLTIuNzY3LTU3LjA0OWMtOS41OTMsMC0xNy4zOTctNy44MDQtMTcuMzk3LTE3LjM5N3M3LjgwNS0xNy4zOTggMTcuMzk3LTE3LjM5OCAxNy4zOTcsNy44MDUgMTcuMzk3LDE3LjM5OC03LjgwNCwxNy4zOTctMTcuMzk3LDE3LjM5N3oiIGZpbGw9IiMzNDhhYzciLz4KICA8L2c+Cjwvc3ZnPgo=" />
+        <img
+          alt="Email"
+          src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ1Mi44NCA0NTIuODQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ1Mi44NCA0NTIuODQiIHdpZHRoPSIxMjhweCIgaGVpZ2h0PSIxMjhweCI+CiAgPGc+CiAgICA8cGF0aCBkPSJtNDQ5LjQ4MywxOTAuNGwuMDAxLS4wMDEtNTcuODI0LTM4LjMzNXYtMTI4LjEzNGMwLTQuMTQyLTMuMzU4LTcuNS03LjUtNy41aC0zMTUuNDljLTQuMTQyLDAtNy41LDMuMzU4LTcuNSw3LjV2MTI4LjE0M2wtNTcuODE0LDM4LjMyNiAuMDAxLC4wMDJjLTIuMDIyLDEuMzQzLTMuMzU3LDMuNjM5LTMuMzU3LDYuMjQ5djIzMi4yNmMwLDQuMTQyIDMuMzU4LDcuNSA3LjUsNy41aDQzNy44NGM0LjE0MiwwIDcuNS0zLjM1OCA3LjUtNy41di0yMzIuMjZjMC0yLjYxLTEuMzM1LTQuOTA2LTMuMzU3LTYuMjV6bS0zODguMzEzLDI2LjIyOWwtMjMuNTI1LTEyLjQ3OWgyMy41MjV2MTIuNDc5em0tNDYuMTctNy41MTFsMTcyLjQ3NSw5MS40OS0xNzIuNDc1LDExNC4zMjd2LTIwNS44MTd6bTIxMS40MTcsODMuNjcxbDE5NC4wMzcsMTI4LjYyMWgtMzg4LjA3M2wxOTQuMDM2LTEyOC42MjF6bTM4Ljk0NSw3LjgybDE3Mi40NzctOTEuNDkxdjIwNS44MjFsLTE3Mi40NzctMTE0LjMzem0xMjYuMjk4LTk2LjQ1OWgyMy41MzZsLTIzLjUzNiwxMi40ODR2LTEyLjQ4NHptMjguNzk0LTE1aC0yOC43OTR2LTE5LjA5bDI4Ljc5NCwxOS4wOXptLTQzLjc5NC0xNTcuNzJ2MTkzLjE2MWwtMTI1LjUyNyw2Ni41ODYtMjAuNTczLTEzLjYzN2MtMi41MTEtMS42NjUtNS43NzYtMS42NjUtOC4yODcsMGwtMjAuNTcsMTMuNjM1LTEyNS41MzMtNjYuNTg5di0xOTMuMTU2aDMwMC40OXptLTMxNS40OSwxNTcuNzJoLTI4Ljc4MmwyOC43ODItMTkuMDh2MTkuMDh6IiBmaWxsPSIjMzQ4YWM3Ii8+CiAgICA8cGF0aCBkPSJtMjI2LjQxNSwyMTMuNjcxaDU5Ljc1NGM0LjE0MiwwIDcuNS0zLjM1OCA3LjUtNy41cy0zLjM1OC03LjUtNy41LTcuNWgtNTkuNzU0Yy0yOC44MTMsMC01Mi4yNTQtMjMuNDQxLTUyLjI1NC01Mi4yNTR2LTIuMjEzYzAtMjguODEzIDIzLjQ0MS01Mi4yNTQgNTIuMjU0LTUyLjI1NHM1Mi4yNTQsMjMuNDQxIDUyLjI1NCw1Mi4yNTR2NS41MzNjMCw2LjIzNy01LjA3NCwxMS4zMTItMTEuMzEyLDExLjMxMnMtMTEuMzEyLTUuMDc0LTExLjMxMi0xMS4zMTJ2LTEwLjUxMmMwLTE3Ljg2NC0xNC41MzMtMzIuMzk4LTMyLjM5Ny0zMi4zOThzLTMyLjM5NywxNC41MzMtMzIuMzk3LDMyLjM5OGMwLDE3Ljg2NCAxNC41MzMsMzIuMzk3IDMyLjM5NywzMi4zOTcgOC4xNjksMCAxNS42MzYtMy4wNDUgMjEuMzQtOC4wNTIgNC42NDQsNy40ODMgMTIuOTMyLDEyLjQ3OCAyMi4zNjksMTIuNDc4IDE0LjUwOCwwIDI2LjMxMi0xMS44MDMgMjYuMzEyLTI2LjMxMnYtNS41MzNjMC0zNy4wODQtMzAuMTctNjcuMjU0LTY3LjI1NC02Ny4yNTRzLTY3LjI1NCwzMC4xNy02Ny4yNTQsNjcuMjU0djIuMjEzYzUuNjg0MzRlLTE0LDM3LjA4NSAzMC4xNyw2Ny4yNTUgNjcuMjU0LDY3LjI1NXptLTIuNzY3LTU3LjA0OWMtOS41OTMsMC0xNy4zOTctNy44MDQtMTcuMzk3LTE3LjM5N3M3LjgwNS0xNy4zOTggMTcuMzk3LTE3LjM5OCAxNy4zOTcsNy44MDUgMTcuMzk3LDE3LjM5OC03LjgwNCwxNy4zOTctMTcuMzk3LDE3LjM5N3oiIGZpbGw9IiMzNDhhYzciLz4KICA8L2c+Cjwvc3ZnPgo="
+        />
       </a>
     </li>
   </ul>
-)
+);
 
-export default Social
+export default Social;
