@@ -198,9 +198,30 @@ code {
   line-height: 24px;
   fill: rgba(0, 0, 0, 0.54);
   letter-spacing: 0px;
-  /* text-align: justify; */
+}
+
+.BlogPost h4 + .gatsby-highlight {
+  margin-top: 8px;
 }
 
 .post-box .gatsby-image-wrapper {
   height: 180px;
+}
+
+.BlogPost code.language-text {
+  background: #d6deeb;
+  color: rebeccapurple;
+  padding: 0.2rem;
+}
+
+.BlogPost .gatsby-highlight-code-line {
+  display: block;
+  background: rebeccapurple;
+  min-width: 500px;
+}
+
+@media (min-width: 576px) {
+  .BlogPost .gatsby-highlight-code-line {
+    min-width: 860px;
+  }
 }
