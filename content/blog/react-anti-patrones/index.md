@@ -2,7 +2,7 @@
 path: '/blog/2019/05/29/antipatrones-react'
 image: './hero.jpg'
 title: 'Errores comunes con React'
-date: '2019-29-05T16:20:32.204Z'
+date: '2019-05-29T02:04:20.769Z'
 topic: 'Javascript'
 description: 'Como dice el título vamos a ver los errores más «Comunes» que podemos cometer a la hora de usar React, muchos de los cuales he encontrado al momento de mantener código y muchas veces por apuro/descuido los he cometido.'
 ---
