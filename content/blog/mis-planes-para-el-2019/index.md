@@ -1,5 +1,5 @@
 ---
-path: '/blog/2018/02/05/mis-planes-para-el-2019'
+path: '/blog/2018/12/31/mis-planes-para-el-2019'
 image: './hero.jpg'
 title: 'Mis planes para el 2019'
 date: '2018-12-31T08:33:33.772Z'
