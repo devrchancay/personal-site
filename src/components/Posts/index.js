@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Image from 'gatsby-image';
 
 const Posts = ({ posts }) => {
   return (
@@ -13,32 +14,26 @@ const Posts = ({ posts }) => {
         {posts.map(({ node }) => (
           <div
             key={node.id}
-            className="border flex pl-1 flex-col mx-2 my-4 pb-3 w-5/6 md:w-1/3 relative post-box"
+            className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 pb-3 w-5/6 md:w-1/3 relative post-box"
           >
             <Link
               className="no-underline text-black"
               to={node.frontmatter.path}
             >
-              <div className="w-full px-2 py-3">
-                <span className="bg-site-color px-2 rounded font-sans text-xs font-bold text-blue-primary">
-                  {node.frontmatter.topic}
-                </span>
-              </div>
-              <div className="w-full px-2 py-3">
-                <h3 className="font-bold leading-tight text-2xl font-sans w-5/6 font-bold font-sans pb-1">
+              <Image sizes={node.frontmatter.image.childImageSharp.sizes} />
+
+              <div className="px-4 py-4">
+                <h3 class="font-sans font-bold text-xl mb-2">
                   {node.frontmatter.title}
                 </h3>
-                <p className="font-serif pt-3 pr-4 text-sm text-gray-primary leading-tight">
+                <p class="font-sans text-gray-700 text-base">
                   {node.frontmatter.description || node.excerpt}
                 </p>
-                <div className="pt-4">
-                  <small>
-                    <span role="img" aria-labelledby="date">
-                      📅
-                    </span>{' '}
-                    {node.frontmatter.date}
-                  </small>
-                </div>
+              </div>
+              <div class="px-6 py-4">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                  {node.frontmatter.topics}
+                </span>
               </div>
             </Link>
           </div>

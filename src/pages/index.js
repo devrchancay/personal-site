@@ -24,7 +24,15 @@ const Index = () => (
                 title
                 path
                 date(formatString: "MMMM DD, YYYY")
-                topic
+                topics
+                image {
+                  id
+                  childImageSharp {
+                    sizes(maxWidth: 1024) {
+                      ...GatsbyImageSharpSizes_withWebp
+                    }
+                  }
+                }
               }
             }
           }
