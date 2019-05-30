@@ -8,14 +8,14 @@ const About = () => (
         <img src={avatar} alt="Ramon Chancay" className="w-full" />
       </div>
       <div className="px-6 py-2">
-        <h3 className="font-sans text-left text-gray-primary my-2 md:text-3xl md:my-4">
+        <h3 className="font-sans text-left text-gray-primary my-2 md:text-3xl md:my-4 font-bold">
           Ramón Chancay Ortega
         </h3>
 
-        <p className="font-serif text-gray-primary py-1 md:text-xl">
+        <p className="font-serif text-gray-primary py-1 md:text-xl leading-tight">
           Front-end / Back-end Developer in Guayaquil Ecuador.
         </p>
-        <p className="font-serif text-gray-primary py-1 md:text-xl">
+        <p className="font-serif text-gray-primary py-1 md:text-xl leading-tight">
           Currently at{' '}
           <a
             className="no-underline text-blue-primary font-bold"
@@ -36,13 +36,13 @@ const About = () => (
           </a>
           .
         </p>
-        <p className="font-serif text-gray-primary py-1 md:text-xl">
+        <p className="font-serif text-gray-primary py-1 md:text-xl leading-tight">
           I enjoy teaching and sharing what I know.
         </p>
-        <p className="font-serif text-gray-primary py-1 md:text-xl">
+        <p className="font-serif text-gray-primary py-1 md:text-xl leading-tight">
           I give professional advice to developers and companies.
         </p>
-        <p className="font-serif text-gray-primary py-1 md:text-xl">
+        <p className="font-serif text-gray-primary py-1 md:text-xl leading-tight">
           My{' '}
           <a
             href="https://twitter.com/@heydisrrael"

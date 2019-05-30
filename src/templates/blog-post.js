@@ -27,7 +27,7 @@ class BlogPostTemplate extends React.Component {
           <Bio />
         </div>
 
-        <ul className="w-full p-4 list-reset flex flex-col items-center md:flex-row md:justify-between md:w-2/3 md:px-0 my-0 mx-auto">
+        <ul className="w-full p-4 list-none p-0 flex flex-col items-center md:flex-row md:justify-between md:w-2/3 md:px-0 my-0 mx-auto">
           <li className="py-2 text-xl">
             {previous && (
               <Link

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Social = () => (
-  <ul className="list-reset flex">
+  <ul className="list-none flex p-0">
     <li className="w-12 px-2 flex justify-center">
       <a
         href="https://twitter.com/devrchancay"

@@ -5,7 +5,7 @@ const Posts = ({ posts }) => {
   return (
     <div className="flex flex-col justify-center items-center content-center py-8 md:w-full">
       <div className="container">
-        <h2 className="font-sans font-bold text-center md:text-left text-gray-primary mx-2">
+        <h2 className="text-2xl font-sans font-bold text-center md:text-left text-gray-primary mx-2 font-bold">
           Last posts (in Spanish)
         </h2>
       </div>
@@ -25,17 +25,17 @@ const Posts = ({ posts }) => {
                 </span>
               </div>
               <div className="w-full px-2 py-3">
-                <h3 className="font-sans w-5/6 font-bold font-sans pb-1">
+                <h3 className="font-bold leading-tight text-2xl font-sans w-5/6 font-bold font-sans pb-1">
                   {node.frontmatter.title}
                 </h3>
-                <p className="font-serif pt-3 pr-4 text-sm text-gray-primary">
+                <p className="font-serif pt-3 pr-4 text-sm text-gray-primary leading-tight">
                   {node.frontmatter.description || node.excerpt}
                 </p>
                 <div className="pt-4">
                   <small>
                     <span role="img" aria-labelledby="date">
                       📅
-                    </span>{" "}
+                    </span>{' '}
                     {node.frontmatter.date}
                   </small>
                 </div>

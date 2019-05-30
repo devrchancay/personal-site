@@ -37,7 +37,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.19",
-    "tailwindcss": "^0.7.4",
+    "tailwindcss": "^1.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typeface-open-sans": "^0.0.54",
@@ -60,10 +60,10 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css && npm run purge:css && gatsby build",
+    "build": "tailwind build ./config.tailwind.css -c ./tailwind.config.js -o ./src/components/Layout/tailwind.css && npm run purge:css && gatsby build",
     "develop": "gatsby develop",
     "purge:css": "purgecss -c purgecss.config.js -o ./src/components/Layout",
-    "tailwind": "tailwind build ./config.tailwind.css -c ./tailwind.js -o ./src/components/Layout/tailwind.css",
+    "tailwind": "tailwind build ./config.tailwind.css -c ./tailwind.config.js -o ./src/components/Layout/tailwind.css",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
