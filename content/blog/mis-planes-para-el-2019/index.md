@@ -3,7 +3,7 @@ path: '/blog/2018/12/31/mis-planes-para-el-2019'
 image: './hero.jpg'
 title: 'Mis planes para el 2019'
 date: '2018-12-31T08:33:33.772Z'
-topic: 'Personal'
+topics: 'Personal'
 ---
 
 Para mí el 2018 fue un gran año lleno de cosas buenas, superamos juntos el embarazo de alto riesgo de mi esposa, nació mi hija Emily, conseguí mi primer empleo remoto Nodejs/Reactjs, hice nuevos amigos por internet, aprendi mucho y descubrí que tengo que aprender mucho más.

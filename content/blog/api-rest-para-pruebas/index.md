@@ -3,7 +3,7 @@ path: '/blog/2018/02/09/api-rest-para-pruebas'
 image: './hero.jpg'
 title: 'API REST para pruebas'
 date: '2018-02-09T23:13:51.386Z'
-topic: 'Development'
+topics: 'Development'
 ---
 
 > En menos de 5 minutos y publicado en Internet

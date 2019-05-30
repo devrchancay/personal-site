@@ -3,7 +3,7 @@ path: '/blog/2018/03/14/configura-tu-aplicacion-de-react-con-sass'
 image: './hero.jpg'
 title: 'Configuración de React con Sass'
 date: '2018-03-14T05:13:46.882Z'
-topic: 'React'
+topics: 'React'
 ---
 
 > > **NOTA:** Para las últimas versiones de create-react-app ( a partir de react-scripts@2.0.0) todo lo que necesitas es instalar node-sass y añadir tus archivos .scss o .sass a tus componentes. Este artículo es válido para versiones inferiores a la 2.0.0.

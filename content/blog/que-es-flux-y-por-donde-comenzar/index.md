@@ -3,7 +3,7 @@ path: '/blog/2018/02/05/que-es-flux-y-por-donde-comenzar'
 image: './hero.jpg'
 title: 'Qué es Flux y por dónde comenzar'
 date: '2018-02-05T23:47:32.204Z'
-topic: 'Javascript'
+topics: 'Javascript'
 ---
 
 Decidí escribir una serie de artículos, relacionados con la arquitectura flux aplicados con React y Vue, encontré la necesidad de aportar con contenido de valor para desarrolladores que no sabemos muchas veces por donde comenzar para adoptar un nueva tecnología.

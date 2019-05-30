@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins|Sintony');
 
-@tailwind preflight;
+@tailwind base;
 
 @tailwind components;
 
 @responsive {
   .bg-linear-blue {
-    background-image: config('colors.linear-blue');
+    background-image: theme('colors.linear-blue');
   }
   .bg-site-color {
-    background: config('colors.site-color');
+    background: theme('colors.site-color');
   }
 
   .text-animation {
@@ -35,6 +35,7 @@ h2,
 h3,
 h4 {
   @apply .font-sans;
+  @apply .font-bold;
 }
 
 .BlogPost p,
@@ -47,6 +48,7 @@ code {
 .BlogPost h1 {
   @apply .text-center;
   @apply .my-2;
+  @apply .text-2xl;
 }
 
 .BlogPost .date {
