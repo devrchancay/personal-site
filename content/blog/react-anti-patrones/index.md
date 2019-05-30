@@ -4,7 +4,7 @@ image: './hero.jpg'
 title: 'Errores comunes con React'
 date: '2019-05-29T02:04:20.769Z'
 topics: 'Javascript'
-description: 'Como dice el título vamos a ver los errores más «Comunes» que podemos cometer a la hora de usar React, muchos de los cuales he encontrado al momento de mantener código y muchas veces por apuro/descuido los he cometido.'
+description: 'Vamos a ver los errores más comunes a la hora de usar React'
 ---
 
 > > **Dijo**: "Es solo un demo lo hice muy rápido, después lo arreglo".

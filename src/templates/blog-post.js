@@ -5,6 +5,7 @@ import Image from 'gatsby-image';
 import Bio from '../components/bio';
 import BlogLayout from '../components/Layout';
 import SEO from '../components/seo';
+import './blog.css';
 
 class BlogPostTemplate extends React.Component {
   render() {
