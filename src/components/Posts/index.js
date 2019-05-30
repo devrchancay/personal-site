@@ -14,7 +14,7 @@ const Posts = ({ posts }) => {
         {posts.map(({ node }) => (
           <div
             key={node.id}
-            className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 pb-3 w-5/6 md:w-1/3 relative post-box"
+            className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 pb-3 w-5/6 md:w-1/3 relative"
           >
             <Link
               className="no-underline text-black"

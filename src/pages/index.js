@@ -23,6 +23,7 @@ const Index = () => (
               frontmatter {
                 title
                 path
+                description
                 date(formatString: "MMMM DD, YYYY")
                 topics
                 image {

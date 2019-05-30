@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./public/**/*.html', './src/**/*.js'],
+  content: [
+    './public/**/*.html',
+    './src/components/**/*.js',
+    './src/pages/**/*.js',
+  ],
   css: ['./src/components/Layout/tailwind.css'],
   extractors: [
     {
@@ -11,4 +15,5 @@ module.exports = {
       extensions: ['html', 'js'],
     },
   ],
+  whitelist: ['.BlogPost'],
 };
