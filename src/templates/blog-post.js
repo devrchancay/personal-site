@@ -17,6 +17,9 @@ class BlogPostTemplate extends React.Component {
       <BlogLayout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
+          image={`${this.props.data.site.siteMetadata.siteUrl}${
+            post.frontmatter.image.childImageSharp.sizes.src
+          }`}
           description={post.frontmatter.description || post.excerpt}
         />
         <Image sizes={post.frontmatter.image.childImageSharp.sizes} />
@@ -65,13 +68,13 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       html
-
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

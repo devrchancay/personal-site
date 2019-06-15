@@ -43,13 +43,14 @@ const Index = () => (
     render={data => (
       <Layout>
         <SEO
-          title="Ramón Chancay (@devrchancay) | Front-end Developer and Educator"
+          title="Front-end Developer and Educator"
           keywords={[
             `freelance`,
             `gatsby`,
             `javascript`,
             `react`,
             `javascript courses`,
+            `it consulting`,
           ]}
         />
         <Header />

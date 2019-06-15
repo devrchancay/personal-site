@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog`,
+    title: `Ramón Chancay Ortega`,
     author: `Ramón Chancay`,
-    description: `Escribo cosas de frontend/backend y publico mi trabajo para que me contraten`,
-    siteUrl: `https://ramonchancay.me/`,
+    description: `Frontend Engineer and Educator, I write about Javascript and I help other developers to improve their developer skills.`,
+    siteUrl: `https://ramonchancay.me`,
     social: {
       twitter: `devrchancay`,
     },
@@ -26,7 +26,6 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        excerpt_separator: `<!-- end -->`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
