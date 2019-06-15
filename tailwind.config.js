@@ -1,28 +1,7 @@
-// let defaultConfig = require('tailwindcss/defaultConfig')
+let { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   theme: {
-    colors: {
-      transparent: 'transparent',
-      gray: {
-        200: '#eeeeee',
-      },
-      black: '#22292f',
-      'grey-darkest': '#3d4852',
-      'grey-darker': '#606f7b',
-      'grey-dark': '#8795a1',
-      grey: '#b8c2cc',
-      'grey-light': '#dae1e7',
-      'grey-lighter': '#f1f5f8',
-      'grey-lightest': '#f8fafc',
-      white: '#ffffff',
-
-      'gray-primary': 'rgb(55, 71, 79)',
-      'blue-primary': 'rgb(72, 198, 239)',
-      'linear-blue':
-        'linear-gradient(to top, rgb(72, 198, 239) 0%, rgb(111, 134, 214) 100%)',
-      'site-color': 'rgb(241, 246, 248) none repeat scroll 0% 0%',
-    },
     screens: {
       sm: '576px',
       md: '768px',
@@ -200,25 +179,6 @@ module.exports = {
       '4': '1rem',
       '6': '1.5rem',
       '8': '2rem',
-    },
-
-    margin: {
-      auto: 'auto',
-      px: '1px',
-      '0': '0',
-      '1': '0.25rem',
-      '2': '0.5rem',
-      '3': '0.75rem',
-      '4': '1rem',
-      '6': '1.5rem',
-      '8': '2rem',
-      '-px': '1px',
-      '-1': '-0.25rem',
-      '-2': '-0.5rem',
-      '-3': '-0.75rem',
-      '-4': '-1rem',
-      '-6': '-1.5rem',
-      '-8': '-2rem',
     },
 
     boxShadow: {

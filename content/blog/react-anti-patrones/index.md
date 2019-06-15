@@ -7,11 +7,7 @@ topics: 'Javascript'
 description: 'Vamos a ver los errores más comunes a la hora de usar React'
 ---
 
-> > **Dijo**: "Es solo un demo lo hice muy rápido, después lo arreglo".
-> >
-> > -- Y **NUNCA** lo arreglo.
-
-Es muy común caer en anti-patrones, me pasa mucho por no profundizar en la documentación al querer implementar técnologias nuevas me paso con JQuery, Angular, Vue, React, Javascript en general y con todo lo que alguna vez trabaje.
+Es muy común caer en anti-patrones, me pasa mucho por no profundizar en la documentación al querer implementar técnologias nuevas. Me paso con JQuery, Angular, Vue, React, Javascript en general y con todo lo que alguna vez trabaje.
 
 ### Javascript
 

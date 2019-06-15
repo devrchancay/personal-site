@@ -9,7 +9,7 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata;
         return (
-          <div className="w-full bg-site-color p-4 flex justify-center flex-col content-center items-center">
+          <div className="bg-gray-200 w-full bg-gray-200 p-4 flex justify-center flex-col content-center items-center">
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
@@ -26,7 +26,7 @@ function Bio() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`https://twitter.com/${social.twitter}`}
-                className="underline text-xl text-gray-primary"
+                className="underline text-xl text-gray-800"
               >
                 Me puedes seguir en twitter
               </a>

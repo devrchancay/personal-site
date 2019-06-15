@@ -32,7 +32,7 @@ class BlogPostTemplate extends React.Component {
           <li className="py-2 text-xl">
             {previous && (
               <Link
-                className="text-gray-primary hover:text-blue-primary"
+                className="text-gray-800 hover:text-blue-400"
                 to={previous.frontmatter.path}
                 rel="prev"
               >
@@ -43,7 +43,7 @@ class BlogPostTemplate extends React.Component {
           <li className="py-2 text-xl">
             {next && (
               <Link
-                className="text-gray-primary hover:text-blue-primary"
+                className="text-gray-800 hover:text-blue-400"
                 to={next.frontmatter.path}
                 rel="next"
               >
@@ -71,6 +71,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
