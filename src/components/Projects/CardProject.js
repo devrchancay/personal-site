@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardProject = ({ name, description, url, forkCount, stargazers }) => {
+const CardProject = ({ name, descriptionHTML, url, forkCount, stargazers }) => {
   return (
     <div className="bg-white shadow-lg p-2 w-full">
       <div className="flex justify-between">
@@ -31,7 +31,7 @@ const CardProject = ({ name, description, url, forkCount, stargazers }) => {
       <div className="w-full py-1">
         <p
           className="text-xs font-sans"
-          dangerouslySetInnerHTML={{ __html: description }}
+          dangerouslySetInnerHTML={{ __html: descriptionHTML }}
         />
       </div>
       <div className="w-full pt-1 flex flex-start">
