@@ -45,7 +45,7 @@ const Index = () => (
               id
               name
               url
-              description
+              descriptionHTML
               stargazers {
                 totalCount
               }
