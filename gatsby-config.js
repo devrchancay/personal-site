@@ -112,7 +112,7 @@ module.exports = {
                   node {
                     ... on Repository {
                       name
-                      description: descriptionHTML
+                      descriptionHTML
                       url
                       stargazers{
                         totalCount
