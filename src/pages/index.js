@@ -7,11 +7,12 @@ import Header from '../components/Header';
 import About from '../components/About';
 import Posts from '../components/Posts';
 import SEO from '../components/seo';
+import Projects from '../components/Projects';
 
 const Index = () => (
   <StaticQuery
     query={graphql`
-      {
+      query {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 4
@@ -38,6 +39,20 @@ const Index = () => (
             }
           }
         }
+        allGithubPinneditems {
+          edges {
+            node {
+              id
+              name
+              url
+              description
+              stargazers {
+                totalCount
+              }
+              forkCount
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -56,6 +71,7 @@ const Index = () => (
         <Header />
         <About />
         <Posts posts={data.allMarkdownRemark.edges} />
+        <Projects projects={data.allGithubPinneditems.edges} />
       </Layout>
     )}
   />

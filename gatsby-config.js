@@ -97,6 +97,35 @@ module.exports = {
       }`,
       },
     },
-    `gatsby-mdx`,
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        queries: [
+          `{
+            user(login:"devrchancay") {
+              pinnedItems(first: 6, types: [REPOSITORY]) {
+                totalCount
+                edges {
+                  node {
+                    ... on Repository {
+                      name
+                      description: descriptionHTML
+                      url
+                      stargazers{
+                        totalCount
+                      }
+                      forkCount
+                    }
+                  }
+                }
+              }
+            }
+          }`,
+        ],
+      },
+    },
   ],
 };

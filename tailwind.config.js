@@ -199,9 +199,7 @@ module.exports = {
       '50': 50,
     },
 
-    fill: {
-      current: 'currentColor',
-    },
+    fill: theme => theme('colors'),
 
     stroke: {
       current: 'currentColor',
@@ -250,7 +248,7 @@ module.exports = {
     inset: ['responsive'],
     resize: ['responsive'],
     boxShadow: ['responsive'],
-    fill: [],
+    fill: ['hover'],
     stroke: [],
     textAlign: ['responsive'],
     textColor: ['responsive', 'hover'],
