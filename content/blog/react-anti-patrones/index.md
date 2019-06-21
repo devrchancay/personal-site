@@ -365,7 +365,7 @@ class ComponenteSorprendeteDeReact extends React.Component {
       </p>
     ) : (
       <p>
-        Espera el fin de mes pobre como un rata
+        Espera el fin de mes pobre como una rata
         <span aria-label="rat" role="img">
           🐀
         </span>
@@ -418,7 +418,7 @@ class ComponenteALaSuerteDeReact extends React.Component {
       </p>
     ) : (
       <p>
-        Espera el fin de mes pobre como un rata
+        Espera el fin de mes pobre como una rata
         <span aria-label="rat" role="img">
           🐀
         </span>
