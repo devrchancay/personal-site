@@ -127,17 +127,5 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-guess-js',
-      options: {
-        GAViewID: `193060796`,
-        minimumThreshold: 0.03,
-
-        period: {
-          startDate: new Date('2018-1-1'),
-          endDate: new Date(),
-        },
-      },
-    },
   ],
 };
