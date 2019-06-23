@@ -7,10 +7,19 @@ const Menu = () => {
       <li className="px-2">
         <Link
           activeClassName="text-blue-400"
-          className=" text-gray-800 hover:text-blue-400 underline"
+          className="text-gray-800 hover:text-blue-400 underline"
           to={'/'}
         >
           Home
+        </Link>
+      </li>
+      <li className="px-2">
+        <Link
+          activeClassName="text-blue-400"
+          to={'/about'}
+          className="text-gray-800 hover:text-blue-400 underline"
+        >
+          About me
         </Link>
       </li>
       <li className="px-2">
