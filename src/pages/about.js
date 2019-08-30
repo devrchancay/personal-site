@@ -69,7 +69,7 @@ const About = props => {
                     </li>
 
                     <li className="my-0 text-sans">
-                      <span className="font-bold pr-1">$25 / hour</span>
+                      <span className="font-bold pr-1">$30 / hour</span>
                     </li>
                     <li className="my-0 text-sans">
                       <span className="font-bold pr-1">Guayaquil, Ecuador</span>
