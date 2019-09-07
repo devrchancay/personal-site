@@ -41,7 +41,7 @@ module.exports = {
         ],
         startDate: 'Sep 2018',
         endDate: 'Present',
-        time: '11 mos',
+        time: '1 yr',
       },
       {
         id: '12ie90u8j1oiek201',
