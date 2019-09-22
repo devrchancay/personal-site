@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { format, formatDistance } from 'date-fns';
 
 import Menu from '../components/Header/menu';
 import SEO from '../components/seo';
@@ -12,18 +13,19 @@ const About = props => {
           site {
             siteMetadata {
               title
-              experience {
+            }
+          }
+          allExperienceYaml {
+            totalCount
+            edges {
+              node {
                 id
                 title
                 company
                 location
-                description {
-                  id
-                  text
-                }
                 startDate
                 endDate
-                time
+                description
               }
             }
           }
@@ -69,14 +71,14 @@ const About = props => {
                     </li>
 
                     <li className="my-0 text-sans">
-                      <span className="font-bold pr-1">$30 / hour</span>
+                      <span className="font-bold pr-1">$25 / hour</span>
                     </li>
                     <li className="my-0 text-sans">
                       <span className="font-bold pr-1">Guayaquil, Ecuador</span>
                     </li>
                     <li className="my-0 text-sans">
                       <span className="font-bold pr-1">
-                        ramon.chancay@gmail.com
+                        hola@ramonchancay.me
                       </span>
                     </li>
                   </ul>
@@ -103,34 +105,41 @@ const About = props => {
                 </h3>
               </div>
               <div className="container md:mt-8 py-4 flex flex-col items-center content-center md:justify-start sm:justify-center">
-                {data.site.siteMetadata.experience.map(experience => (
+                {data.allExperienceYaml.edges.map(({ node }) => (
                   <div
                     className="w-5/6 md:w-2/3 my-2 flex flex-col md:flex-row  border-gray-300 border-b pb-2"
-                    key={experience.id}
+                    key={node.id}
                   >
                     <div className="md:w-1/3 flex justify-center content-start  mb-6 md:mb-0 items-start pt-4">
                       <div
                         className="shadow-lg px-2 py-6 bg-blue-400"
                         style={{ minWidth: 190, maxWidth: 190 }}
                       >
-                        <p className="text-white text-center">
-                          {experience.company}
+                        <p className="text-white text-center">{node.company}</p>
+                        <p className="text-center">
+                          {formatDistance(
+                            new Date(node.startDate),
+                            node.endDate ? new Date(node.endDate) : new Date(),
+                            { addSuffix: true },
+                          )}
                         </p>
-                        <p className="text-center">{experience.time}</p>
                       </div>
                     </div>
                     <div className="md:w-2/3 text-center md:text-left">
                       <h4 className="text-center md:text-left text-xl md:text-3xl font-sans my-2">
-                        {experience.title}
+                        {node.title}
                       </h4>
                       <p className="text-gray-500">
-                        {experience.startDate} - {experience.endDate}
+                        {format(new Date(node.startDate), 'MMMM yyyy')} -{' '}
+                        {node.endDate
+                          ? format(new Date(node.endDate), 'MMMM yyyy')
+                          : 'Present'}
                       </p>
                       <ul className="text-left mt-8 md:mt-0 font-sans">
-                        {experience.description.map(description => {
+                        {node.description.map((description, key) => {
                           return (
-                            <li className="my-1" key={description.id}>
-                              {description.text}
+                            <li className="my-1" key={key}>
+                              - {description}
                             </li>
                           );
                         })}

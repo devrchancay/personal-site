@@ -1,0 +1,63 @@
+- title: Frontend Engineer
+  company: Everymundo
+  location: Miami, FL (remote)
+  startDate: 2018-09-17
+  endDate: ""
+  description:
+    - Develop new user-facing features using React.js.
+    - Build reusable components.
+    - Translate designs and wireframes into high quality code.
+    - Optimize components for maximum performance across a vast array of web-capable devices and browsers.
+    - Create unit testing for each delivered module.
+    - Maintain and improve the existing code base
+- title: Full Stack Engineer
+  company: Diario El Universo
+  location: Guayaquil, Ecuador
+  startDate: 2015-01-06
+  endDate: 2018-10-01
+  description:
+    - Design and maintain new features of the website.
+    - Make architecture decisions for new developments.
+    - Document and implement new technologies.
+    - Improve the performance of the website.
+    - Maintenance of internal subscription systems to the printed newspaper using Nodejs.
+- title: Programmer Analyst
+  company: Hispana de Seguros
+  location: Guayaquil, Ecuador
+  startDate: 2014-05-14
+  endDate: 2014-12-24
+  description:
+    - Implementation of electronic invoicing (SRI)
+    - Improvements and adjustments to internal systems (Informix 4GL)
+    - creation of scripts for internal processes ( Python 2.5 )
+    - Documentation and training to the development team.
+- title: Senior Web Application Developer
+  company: iT/Corp
+  location: Guayaquil, Ecuador
+  startDate: 2013-10-11
+  endDate: 2014-05-13
+  description:
+    - Maintaining ticket system for help desk, for internal use.
+    - Front-end and back-end training for the development team.
+    - Development of websites for company customers.
+    - Database consulting for the development of an ERP.
+- title: Front-end Architect
+  company: Centraltrust S.A
+  location: Guayaquil, Ecuador
+  startDate: 2013-05-14
+  endDate: 2013-10-11
+  description:
+    - Development of high performance websites.
+    - User experience and compatibility with older browsers.
+    - Development of back-end for mobile applications (Django REST Framework)
+    - Training for designers on css3 and HTML5
+- title: Junior Web Developer
+  company: Tecnograp S.A
+  location: Guayaquil, Ecuador
+  startDate: 2012-09-03
+  endDate: 2013-05-12
+  description:
+    - Maintaining ERP modules
+    - Migration of modules developed in Vbasic 0.6 to php.
+    - Development of customized systems.
+    - Implementation of new technologies of the time.
