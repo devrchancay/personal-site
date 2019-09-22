@@ -1,3 +1,13 @@
+- title: Educator and Web Developer
+  company: Freelance
+  startDate: 2012-09-03
+  endDate: ""
+  description:
+    - Consulting and training for development teams.
+    - Development and implementation of digital products.
+    - Improvements in web and SEO performance for corporate websites.
+    - Mobile application development for Android with React Native.
+    - Migration of traditional cms to Jam Stack with gatsby.
 - title: Frontend Engineer
   company: Everymundo
   location: Miami, FL (remote)

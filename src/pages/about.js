@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { format, formatDistance } from 'date-fns';
+import { format, formatDistanceStrict } from 'date-fns';
 
 import Menu from '../components/Header/menu';
 import SEO from '../components/seo';
@@ -117,10 +117,10 @@ const About = props => {
                       >
                         <p className="text-white text-center">{node.company}</p>
                         <p className="text-center">
-                          {formatDistance(
+                          {formatDistanceStrict(
                             new Date(node.startDate),
                             node.endDate ? new Date(node.endDate) : new Date(),
-                            { addSuffix: true },
+                            { roundingMethod: 'floor' },
                           )}
                         </p>
                       </div>
