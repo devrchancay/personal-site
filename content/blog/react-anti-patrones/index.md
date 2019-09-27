@@ -19,7 +19,7 @@ Vamos a ver los errores más «comunes» que podemos cometer a la hora de usar R
 
 Renderizar una lista de componentes a base de un objeto o arreglo, es algo que se hace **mucho** en React para eso es necesario especificar un `key` a cada ítem de la lista. Las keys ayudan a identificar que items han cambiado, son agregados, o son eliminados.
 
-Las keys deben deben especificarse dentro del array para darle a los elementos una identidad estable y es necesario que este elemento sea único.
+Las keys deben especificarse dentro del array para darle a los elementos una identidad estable y es necesario que este elemento sea único.
 
 ```jsx
 // Dada esta lista de elementos.
@@ -197,7 +197,7 @@ class ElegirDeseo extends React.Component {
 ```jsx
 /**
  *  Para versiones de React 16.2 o inferiores
- *  Se debe usar el patron callback
+ *  Se debe usar el patrón callback
  **/
 
 class ElegirDeseo extends React.Component {
@@ -280,13 +280,13 @@ class ElegirDeseo extends React.Component {
 
 #### Solución
 
-> Siempre que necesites hacer acceder a un elemento especifico del **DOM** usa Refs, tambien podrias usar `findDOMNode()` aunque ya no se recomienda, debido a que rompe la abstracción del componente y esta siendo deprecado en el modo estricto **StricMode**.
+> Siempre que necesites acceder a un elemento especifico del **DOM** usa Refs, tambien podrias usar `findDOMNode()` aunque ya no se recomienda, debido a que rompe la abstracción del componente y está siendo deprecado en el modo estricto **StricMode**.
 
 ![Ejemplo de Refs](./ejemplo-de-refs.gif)
 
-> Nota: `React.createRef()` no te va a funcionar en un componente de función a menos que hagas referencia a un componente de clase o a un elemento html como input, button, text area etc
+> Nota: `React.createRef()` no te va a funcionar en un componente de función a menos que hagas referencia a un componente de clase o a un elemento html como `input`, `button`, `textarea` etc.
 
-a criterio personal los refs, la inmutabilidad y el ciclo de vida de un componente son las cosas más complejas de entender y aplicar en React.
+A criterio personal los `refs`, la inmutabilidad y el ciclo de vida de un componente son las cosas más complejas de entender y aplicar en React.
 
 #### Si te interesa saber más
 
@@ -298,7 +298,7 @@ a criterio personal los refs, la inmutabilidad y el ciclo de vida de un componen
 #### 4. Mutar propiedades
 
 React te permite crear componentes reutilizables e independientes, es ideal pensar en cada pieza de forma aislada para que se pueden reutilizar.
-Conceptualmente, los componentes son funciones _puras_ de Javascript que aceptan entradas (props) y devuelven elementos de React.
+Conceptualmente, los componentes son funciones _puras_ de Javascript que aceptan entradas (`props`) y devuelven elementos de React.
 
 #### Función pura.
 
@@ -383,7 +383,7 @@ class ComponenteSorprendeteDeReact extends React.Component {
 <ComponenteSorprendeteDeReact esFinDeMes={false} /> // 🐀
 ```
 
-React es muy claro en la documentación sobre este punto, pero quien no ha tenido requerimientos de último minuto, el cliente esta esperando en la oficina de alado, el día siguiente es feriado o vamos a comezar las vacaciones etc.
+React es muy claro en la documentación sobre este punto, pero quien no ha tenido requerimientos de último minuto, el cliente esta esperando en la oficina de al lado, el día siguiente es feriado o vamos a comenzar las vacaciones etc.
 
 y terminamos escribiendo algo así:
 
@@ -430,22 +430,22 @@ class ComponenteALaSuerteDeReact extends React.Component {
 
 El ejemplo anterior está mal en muchos sentidos:
 
-- **1)** Pasar el valor de las propiedades (props) a estados en el constructor de hecho es recomendable no hacerlo en ningún lado las props son de solo lectura y en una función pura vendrían a ser las «entradas». <br/>
+- **1)** Pasar el valor de las propiedades (`props`) a estados en el constructor de hecho es recomendable no hacerlo en ningún lado las props son de solo lectura y en una función pura vendrían a ser las «entradas». <br/>
   El uso de propiedades para "inicializar" el estado conduce a duplicación de "la fuente de verdad" esto hace difícil determinar donde se encuentran los datos reales y esto puede ocacionar errores si el componente se "actualiza" el nuevo valor nunca se mostrara ya que el _constructor se ejecuta solo cuando el compomente se crea por primera vez._
 - **2)** Hacer una operación impredecible con el valor de la propiedad.
-- **3)** Hacer que el componente reaccione en base a el estado derivado de una propiedad.
+- **3)** Hacer que el componente reaccione en base al estado derivado de una propiedad.
 
 Para resolver problemas así debemos tener en cuenta los **container** y **presentational** components
 
 #### Container Components
 
-Podemos deducir por su nombre que son contenedores la mayoria de estos componentes no tienen presentacion grafica **UI** son los encargados de hacer peticiones HTTP, hacer cálculos y pasar las propiedades a los componentes presentacionales. _Si aqui deberíamos hacer el cálculo de los 3 días_
+Podemos deducir por su nombre que son contenedores, la mayoria de estos componentes no tienen presentacion grafica **UI** son los encargados de hacer peticiones HTTP, hacer cálculos y pasar las propiedades a los componentes presentacionales. _Sí, aqui deberíamos hacer el cálculo de los 3 días_
 
 #### Presentational Components
 
-Componentes que solo se encargan de presentar UI son funciones puras que reaccionan según las props que se les envie un ejemplo de ello sería `<ComponenteSorprendeteDeReact />`
+Componentes que solo se encargan de presentar UI son funciones puras que reaccionan según las `props` que les envie, un ejemplo de ello sería `<ComponenteSorprendeteDeReact />`
 
-> **Nota:** Este concepto era muy famoso hace unos años, ahora mismo no es necesario hacer una separación extricta de componentes de esta forma,ahora existen los hooks que permiten hacer lo mismo. Solo lo debes tener en cuenta si en algún momento tienes que mantener una base de código que lleva muchos años en desarrollo.
+> **Nota:** Este concepto era muy famoso hace unos años, ahora mismo no es necesario hacer una separación estricta de componentes de esta forma, ahora existen los `hooks` que permiten hacer lo mismo. Debes tenerlo en cuenta si en algún momento tienes que mantener una base de código que lleva muchos años en desarrollo.
 
 #### Solución
 
@@ -460,7 +460,7 @@ Componentes que solo se encargan de presentar UI son funciones puras que reaccio
 
 #### 5 Usar `bind()` en el metodo _render_
 
-bind, call y apply son metodos que usamos muchas veces si saber que hacen exactamente y si llevas poco o mucho tiempo en React seguramente haz visto algo como esto
+`bind`, `call` y `apply` son metodos que usamos muchas veces sin saber que hacen exactamente y si llevas poco o mucho tiempo en React seguramente haz visto algo como esto
 
 ```jsx
 class BindMaligno extends React.Component {
@@ -477,7 +477,7 @@ class BindMaligno extends React.Component {
 }
 ```
 
-Por que es necesario el `bind()` cuando declaras funciones utilizando clases y la palabra reservada `extends` las funciones personalizadas como `onSubmit()` pierden sus enlaces es decir no puedes acceder a `this.state` , `this.setState`, `this.props` por esa razón las funciones personalizadas deben volver a ser enlazadas con `bind()`.
+Porque es necesario el `bind()` cuando declaras funciones utilizando clases y la palabra reservada `extends` las funciones personalizadas como `onSubmit()` pierden sus enlaces es decir no puedes acceder a `this.state` , `this.setState`, `this.props` por esa razón las funciones personalizadas deben volver a ser enlazadas con `bind()`.
 
 > ¿Pero donde esta el error en el ejemplo anterior?
 
