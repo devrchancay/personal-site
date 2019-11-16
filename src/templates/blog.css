@@ -101,6 +101,7 @@ code {
 
 .BlogPost a {
   color: #000000;
+  text-decoration: underline;
 }
 
 .BlogPost ul {
