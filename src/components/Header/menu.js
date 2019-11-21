@@ -16,7 +16,7 @@ const Menu = () => {
       <li className="px-2">
         <Link
           activeClassName="text-blue-400"
-          to={'/about'}
+          to={'/about-me/'}
           className="text-gray-800 hover:text-blue-400 underline"
         >
           About me
@@ -26,7 +26,7 @@ const Menu = () => {
         <Link
           activeClassName="text-blue-400"
           className="text-gray-800 hover:text-blue-400 underline"
-          to={`/blog`}
+          to={`/blog/`}
         >
           Blog
         </Link>
