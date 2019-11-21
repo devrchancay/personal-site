@@ -85,9 +85,26 @@ const About = ({ data }) => {
           </div>
         </div>
       </div>
+      <div className="bg-white flex justify-start py-8 flex-col font-sans content-center items-center">
+        <div className="container py-2 flex flex-col items-center content-center md:justify-start sm:justify-center">
+          <h2 className="my-2 text-center flex flex-col md:flex-row text-3xl md:text-4xl text-animation">
+            Companies that trust my work.
+          </h2>
+          <h3 className="text-center flex flex-col md:flex-row text-xl md:text-xl text-animation text-gray-500">
+            Developing customized solutions.
+          </h3>
+          <div className="w-full flex py-4 md:py-8 mt-4 md:mt-8 md:justify-center flex-wrap">
+            {data.companies.edges.map(({ node }) => (
+              <div className="w-1/2 px-4 md:w-1/5 my-4 md:my-1">
+                <Image fluid={node.childImageSharp.fluid} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-      <div className="bg-white flex justify-start py-8 flex-col font-sans content-center items-center md:h-80">
-        <div className="container py-4 flex flex-col items-center content-center md:justify-start sm:justify-center">
+      <div className="bg-white flex justify-start pt-0 pb-8 flex-col font-sans content-center items-center md:h-80">
+        <div className="container py-2 flex flex-col items-center content-center md:justify-start sm:justify-center">
           <h2 className="my-2 text-center flex flex-col md:flex-row text-4xl md:text-5xl text-animation">
             Experience
           </h2>
@@ -127,13 +144,11 @@ const About = ({ data }) => {
                     : 'Present'}
                 </p>
                 <ul className="text-left mt-8 md:mt-0 font-sans">
-                  {node.description.map((description, key) => {
-                    return (
-                      <li className="my-1" key={key}>
-                        - {description}
-                      </li>
-                    );
-                  })}
+                  {node.description.map((description, key) => (
+                    <li className="my-1" key={key}>
+                      - {description}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -159,13 +174,15 @@ export const query = graphql`
         }
       }
     }
-    companies: allFile(filter: { name: { in: ["desarol", "ivcmedia"] } }) {
+    companies: allFile(
+      filter: { name: { in: ["desarol", "ivcmedia", "el_universo"] } }
+    ) {
       edges {
         node {
           id
           childImageSharp {
-            fixed(width: 300, height: 150) {
-              ...GatsbyImageSharpFixed_withWebp
+            fluid(maxWidth: 450, maxHeight: 100) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
