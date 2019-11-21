@@ -85,7 +85,12 @@ module.exports = {
         icon: `content/assets/profile.jpg`,
       },
     },
-    `gatsby-plugin-remove-serviceworker`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about-me/`, `/blog/*`],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typography`,
     {
