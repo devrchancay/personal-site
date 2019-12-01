@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/ramonchancay/.nvm/versions/node/v10.15.1/bin/node /Users/ramonchancay/.nvm/versions/node/v10.15.1/bin/yarn init
+
+PATH: 
+  /Users/ramonchancay/.nvm/versions/node/v10.15.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ramonchancay/.nvm/versions/node/v10.15.1/bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/ramonchancay/.nvm/versions/node/v10.15.1/lib/node_modules/yarn/lib/cli.js:125801:13)
+      at Interface.emit (events.js:189:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:168:10)
+      at ReadStream.emit (events.js:189:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1022:36)
+      at ReadStream.emit (events.js:189:13)
+      at addChunk (_stream_readable.js:284:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
