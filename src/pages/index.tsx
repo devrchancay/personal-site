@@ -1,15 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import tw from 'tailwind.macro';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Social from '../components/Social';
 import AboutInfo from '../components/AboutInfo';
+import Seo from '../components/Seo';
 
 const Home = ({ data }) => {
   return (
     <Layout>
+      <Seo title="Front-end Developer and Educator | Ramón Chancay Ortega" />
       <main>
         <Hero
           name={data.prismicBio.data.short_name}

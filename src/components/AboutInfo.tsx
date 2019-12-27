@@ -29,7 +29,7 @@ const AboutInfo = ({ name, description, avatar }: AboutInfoProps) => {
       >
         <div css={tw`px-6 py-2`}>
           <h3
-            css={tw`font-sans text-left text-gray-800 my-2 md:text-3xl md:my-4 font-bold`}
+            css={tw`font-sans text-center text-gray-800 my-2 md:text-3xl md:my-4 font-bold md:text-left`}
           >
             {name}
           </h3>

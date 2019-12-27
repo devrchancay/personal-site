@@ -21,9 +21,7 @@ const Hero = ({ name, position }: HeroProps) => {
           <span css={tw`text-gray-800 mx-1 font-bold`}>Hello I'm</span>
           <span css={tw`text-blue-400 mx-1 font-bold`}>{name}</span>
         </h1>
-        <h2
-          css={tw`text-gray-800 text-center text-xl font-bold md:text-3xl font-bold m-0`}
-        >
+        <h2 css={tw`text-gray-800 text-center text-xl md:text-3xl m-0`}>
           {position}
         </h2>
       </div>

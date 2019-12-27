@@ -6,7 +6,7 @@
   "author": "Ramon Chancay <ramon.chancay@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop",
+    "develop": "gatsby develop",
     "build": "gatsby build"
   },
   "dependencies": {
@@ -16,15 +16,22 @@
     "gatsby": "^2.18.5",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-emotion": "^4.1.16",
+    "gatsby-plugin-react-head": "^1.1.0",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-plugin-tailwindcss": "^1.0.3",
     "gatsby-plugin-typescript": "^2.1.20",
+    "gatsby-plugin-typography": "^2.3.20",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
     "gatsby-transformer-sharp": "^2.3.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-head": "^3.1.1",
+    "react-typography": "^0.16.19",
     "tailwind.macro": "^1.0.0-alpha.10",
-    "typescript": "^3.7.2"
+    "typeface-poppins": "^0.0.72",
+    "typeface-sintony": "^0.0.72",
+    "typescript": "^3.7.2",
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "@types/node": "^12.12.14",
