@@ -1,16 +1,23 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Hero from '../components/Hero';
-import Social from '../components/Social';
-import AboutInfo from '../components/AboutInfo';
-import Seo from '../components/Seo';
+
+import {
+  Layout,
+  Hero,
+  Seo,
+  BlogPost,
+  AboutInfo,
+  Menu,
+  Social,
+  Footer
+} from '../components';
 
 const Home = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Front-end Developer and Educator | Ramón Chancay Ortega" />
+      <Seo title="Front-end Developer and Educator" />
+      <Menu isHome />
       <main>
         <Hero
           name={data.prismicBio.data.short_name}
@@ -24,6 +31,8 @@ const Home = ({ data }) => {
             data.prismicBio.data.profile_picture.localFile.childImageSharp.fluid
           }
         />
+        <BlogPost posts={data.allPrismicBlogPost.edges} />
+        <Footer items={data.prismicBio.data.body[0].items} />
       </main>
     </Layout>
   );
@@ -54,6 +63,33 @@ export const query = graphql`
             childImageSharp {
               fluid(maxWidth: 300, maxHeight: 300) {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+    allPrismicBlogPost(sort: { fields: [data___publish_date], order: DESC }) {
+      edges {
+        node {
+          id
+          data {
+            category {
+              uid
+            }
+            title {
+              text
+            }
+            excerpt {
+              text
+            }
+            cover {
+              localFile {
+                childImageSharp {
+                  sizes(maxWidth: 1024) {
+                    ...GatsbyImageSharpSizes_withWebp
+                  }
+                }
               }
             }
           }

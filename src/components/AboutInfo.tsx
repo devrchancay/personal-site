@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import styled from '@emotion/styled';
 import tw from 'tailwind.macro';
 import Image from 'gatsby-image';
 
@@ -33,7 +32,7 @@ const AboutInfo = ({ name, description, avatar }: AboutInfoProps) => {
           >
             {name}
           </h3>
-          <p
+          <div
             css={tw`font-serif text-gray-800 py-1 md:text-xl leading-tight`}
             dangerouslySetInnerHTML={{ __html: description }}
           />

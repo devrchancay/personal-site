@@ -10,7 +10,7 @@ type HeroProps = {
 const Hero = ({ name, position }: HeroProps) => {
   return (
     <div
-      css={tw`bg-white flex justify-center pt-8 flex-col font-sans content-center items-center md:h-80`}
+      css={tw`bg-white flex justify-center py-6 pt-4 flex-col font-sans content-center items-center md:h-80`}
     >
       <div
         css={tw` py-4 flex flex-col items-center content-center md:justify-start sm:justify-center`}
