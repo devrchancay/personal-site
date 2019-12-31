@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { Global, jsx, css } from '@emotion/core';
+import { blogPostStyles } from '../styles';
 
 const Layout = ({ children }) => {
   return (
@@ -24,6 +25,8 @@ const Layout = ({ children }) => {
             color: #63b3ed;
             font-weight: 700;
           }
+
+          ${blogPostStyles}
         `}
       />
       {children}

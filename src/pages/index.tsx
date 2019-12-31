@@ -32,6 +32,7 @@ const Home = ({ data }) => {
           }
         />
         <BlogPost posts={data.allPrismicBlogPost.edges} />
+
         <Footer items={data.prismicBio.data.body[0].items} />
       </main>
     </Layout>
@@ -73,6 +74,9 @@ export const query = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           data {
             category {
               uid
@@ -80,14 +84,12 @@ export const query = graphql`
             title {
               text
             }
-            excerpt {
-              text
-            }
+
             cover {
               localFile {
                 childImageSharp {
-                  sizes(maxWidth: 1024) {
-                    ...GatsbyImageSharpSizes_withWebp
+                  fluid(maxWidth: 300, maxHeight: 150) {
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }

@@ -24,6 +24,7 @@ const BlogPost = ({ posts = [] }) => {
               category={node.data.category.uid}
               key={node.id}
               title={node.data.title.text}
+              slug={node.fields.slug}
             />
           );
         })}

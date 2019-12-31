@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const prismicHtmlSerializer = require('./src/utils/htmlSerializer');
+
 module.exports = {
   siteMetadata: {
     title: process.env.SITE_TITLE,
@@ -14,11 +16,13 @@ module.exports = {
     `gatsby-plugin-tailwindcss`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-head`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-prismic`,
       options: {
         repositoryName: process.env.PRISMIC_REPO_NAME,
-        accessToken: process.env.PRISMIC_ACCESS_TOKEN
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        htmlSerializer: () => prismicHtmlSerializer
       }
     },
     {

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import tw from 'tailwind.macro';
 
-import { Social } from '../components';
+// import { Social } from '../components';
 
 interface Item {
   title: string;
@@ -39,7 +39,7 @@ const Footer = ({ items }: FooterProps) => {
           </small>
         </div>
         <div css={tw`w-full md:w-1/3 py-2 flex justify-center md:justify-end`}>
-          <Social items={items} />
+          {/* <Social items={items} /> */}
         </div>
       </div>
     </footer>

@@ -18,6 +18,7 @@ const AboutInfo = ({ name, description, avatar }: AboutInfoProps) => {
         css={tw`px-6 sm:flex sm:justify-center sm:content-center sm:items-center`}
       >
         <Image
+          loading="eager"
           style={{ minWidth: 300, minHeight: 300 }}
           css={tw`w-full`}
           fluid={avatar}
