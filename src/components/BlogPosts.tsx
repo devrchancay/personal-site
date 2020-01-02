@@ -21,7 +21,6 @@ const BlogPost = ({ posts = [] }) => {
           return (
             <CardPost
               cover={node.data.cover.localFile.childImageSharp}
-              category={node.data.category.uid}
               key={node.id}
               title={node.data.title.text}
               slug={node.fields.slug}

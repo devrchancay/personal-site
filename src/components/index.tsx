@@ -7,3 +7,6 @@ export { default as Footer } from './Footer';
 export { default as Social } from './Social';
 export { default as BlogPost } from './BlogPosts';
 export { default as Loading } from './Loading';
+export { default as RenderIf } from './RenderIf';
+export { default as Projects } from './Projects';
+export { default as CardProject } from './CardProject';

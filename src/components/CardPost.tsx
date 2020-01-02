@@ -6,12 +6,11 @@ import Img from 'gatsby-image';
 
 type CardPostProps = {
   title: string;
-  category: string;
   cover: object;
   slug: string;
 };
 
-const CardPost = ({ title, category, cover, slug }: CardPostProps) => {
+const CardPost = ({ title, cover, slug }: CardPostProps) => {
   return (
     <div
       css={tw`max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 pb-3 w-5/6 relative`}

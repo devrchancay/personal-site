@@ -1,6 +1,5 @@
 const { RichText } = require('prismic-dom');
 
-// We don't want to import every PrismJS component - so that's why they're required individually
 const Prism = require('prismjs');
 require('prismjs/components/prism-javascript');
 require('prismjs/components/prism-css');
@@ -14,9 +13,8 @@ require('prismjs/components/prism-graphql');
 
 const { Elements } = RichText;
 
-// Labels with this name will be inline code
 const codeInline = ['text'];
-// Labels with these names will become code blocks
+
 const codeBlock = [
   'javascript',
   'css',
@@ -37,10 +35,20 @@ const htmlSerializer = (type, element, content) => {
       if (codeInline.includes(element.data.label)) {
         return `<code class="language-${element.data.label}">${content}</code>`;
       }
+
+      if (element.data.label === 'double-quote') {
+        return `<blockquote><blockquote>${content}</blockquote></blockquote>`;
+      }
+
       // Use the blockquote for labels with the name "quote"
       if (element.data.label === 'quote') {
         return `<blockquote><p>${content}</p></blockquote>`;
       }
+
+      if (element.data.label === 'highlight') {
+        return `<code class="language-text">${content}</code>`;
+      }
+
       // Use the code block for labels that are in the array of "codeBlock"
       // Choose the right PrismJS highlighting with the label name
       if (codeBlock.includes(element.data.label)) {

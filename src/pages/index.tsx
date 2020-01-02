@@ -10,7 +10,9 @@ import {
   AboutInfo,
   Menu,
   Social,
-  Footer
+  Footer,
+  RenderIf,
+  Projects
 } from '../components';
 
 const Home = ({ data }) => {
@@ -32,7 +34,9 @@ const Home = ({ data }) => {
           }
         />
         <BlogPost posts={data.allPrismicBlogPost.edges} />
-
+        <RenderIf isTrue={data.site.siteMetadata.githubProjects}>
+          <Projects projects={data.allGithubPinneditems.edges} />
+        </RenderIf>
         <Footer />
       </main>
     </Layout>
@@ -68,13 +72,9 @@ export const query = graphql`
             slug
           }
           data {
-            category {
-              uid
-            }
             title {
               text
             }
-
             cover {
               localFile {
                 childImageSharp {
@@ -86,6 +86,24 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    allGithubPinneditems {
+      edges {
+        node {
+          forkCount
+          stargazers {
+            totalCount
+          }
+          name
+          descriptionHTML
+          url
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        githubProjects
       }
     }
   }

@@ -8,11 +8,12 @@ module.exports = {
     siteUrl: process.env.SITE_URL,
     description: process.env.SITE_DESCRIPTION,
     social: {
-      twitter: 'https://twitter.com/devrchancay',
-      linkedin: 'https://www.linkedin.com/in/devrchancay/',
-      github: 'https://github.com/devrchancay',
-      email: 'mailto:hola@ramonchancay.me'
-    }
+      twitter: process.env.TWITTER,
+      linkedin: process.env.LINKEDIN,
+      github: process.env.GITHUB,
+      email: process.env.EMAIL
+    },
+    githubProjects: process.env.SHOW_GITHUB_PROJECTS === 'true'
   },
   plugins: [
     `gatsby-transformer-sharp`,

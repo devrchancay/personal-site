@@ -4,12 +4,13 @@ import tw from 'tailwind.macro';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { Layout, Menu } from '../components';
+import { Layout, Menu, Seo } from '../components';
 
 const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Menu isHome={false} />
+      <Seo title={data.prismicBlogPost.data.title.text} />
       <div css={tw`flex flex-col items-center w-full py-2`}>
         <div css={tw`w-full md:w-3/4`}>
           <Img
@@ -17,9 +18,12 @@ const BlogPost = ({ data }) => {
             {...data.prismicBlogPost.data.cover.localFile.childImageSharp}
           />
         </div>
-        <h1 css={tw`text-2xl md:text-4xl my-4`}>
-          {data.prismicBlogPost.data.title.text}
-        </h1>
+        <div css={tw`px-4`}>
+          <h1 css={tw`text-center text-2xl md:text-4xl my-4`}>
+            {data.prismicBlogPost.data.title.text}
+          </h1>
+        </div>
+        <p className="date">{data.prismicBlogPost.data.publish_date}</p>
         <div
           className="BlogPost"
           css={tw`w-full px-5 md:w-3/4`}
@@ -39,6 +43,7 @@ export const query = graphql`
         title {
           text
         }
+        publish_date(formatString: "DD MMMM YYYY", locale: "es")
         cover {
           localFile {
             childImageSharp {
