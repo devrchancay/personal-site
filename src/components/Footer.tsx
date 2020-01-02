@@ -1,23 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import tw from 'tailwind.macro';
+import { Social } from '../components';
 
-// import { Social } from '../components';
-
-interface Item {
-  title: string;
-  icon_name: string;
-  link: {
-    url: string;
-    target: string;
-  };
-}
-
-type FooterProps = {
-  items: Item[];
-};
-
-const Footer = ({ items }: FooterProps) => {
+const Footer = () => {
   return (
     <footer
       css={tw`flex flex-col justify-center bg-gray-200 w-full p-4 items-center`}
@@ -39,7 +25,7 @@ const Footer = ({ items }: FooterProps) => {
           </small>
         </div>
         <div css={tw`w-full md:w-1/3 py-2 flex justify-center md:justify-end`}>
-          {/* <Social items={items} /> */}
+          <Social size={35} />
         </div>
       </div>
     </footer>

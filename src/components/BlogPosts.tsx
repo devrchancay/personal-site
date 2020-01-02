@@ -7,7 +7,7 @@ import CardPost from './CardPost';
 const BlogPost = ({ posts = [] }) => {
   return (
     <div
-      css={tw`flex flex-col justify-center items-center content-center py-8 md:w-full`}
+      css={tw`flex flex-col justify-center items-center content-center py-8 md:w-full md:px-6`}
     >
       <div css={tw`flex`}>
         <h2

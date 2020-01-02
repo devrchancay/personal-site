@@ -6,7 +6,13 @@ module.exports = {
   siteMetadata: {
     title: process.env.SITE_TITLE,
     siteUrl: process.env.SITE_URL,
-    description: process.env.SITE_DESCRIPTION
+    description: process.env.SITE_DESCRIPTION,
+    social: {
+      twitter: 'https://twitter.com/devrchancay',
+      linkedin: 'https://www.linkedin.com/in/devrchancay/',
+      github: 'https://github.com/devrchancay',
+      email: 'mailto:hola@ramonchancay.me'
+    }
   },
   plugins: [
     `gatsby-transformer-sharp`,

@@ -18,7 +18,7 @@ const Hero = ({ name, position }: HeroProps) => {
         <h1
           css={tw`my-4 text-center flex flex-col md:flex-row text-4xl md:text-6xl text-animation`}
         >
-          <span css={tw`text-gray-800 mx-1 font-bold`}>Hello I'm</span>
+          <span css={tw`text-gray-800 mx-1 font-bold`}>Hi! I'm</span>
           <span css={tw`text-blue-400 mx-1 font-bold`}>{name}</span>
         </h1>
         <h2 css={tw`text-gray-800 text-center text-xl md:text-3xl m-0`}>

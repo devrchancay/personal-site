@@ -23,7 +23,7 @@ const Home = ({ data }) => {
           name={data.prismicBio.data.short_name}
           position={data.prismicBio.data.position}
         />
-        <Social items={data.prismicBio.data.body[0].items} />
+        <Social size={40} />
         <AboutInfo
           name={data.prismicBio.data.name}
           description={data.prismicBio.data.description_bio.html}
@@ -33,7 +33,7 @@ const Home = ({ data }) => {
         />
         <BlogPost posts={data.allPrismicBlogPost.edges} />
 
-        <Footer items={data.prismicBio.data.body[0].items} />
+        <Footer />
       </main>
     </Layout>
   );
@@ -48,16 +48,6 @@ export const query = graphql`
         position
         description_bio {
           html
-        }
-        body {
-          items {
-            title
-            icon_name
-            link {
-              url
-              target
-            }
-          }
         }
         profile_picture {
           localFile {
