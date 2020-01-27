@@ -6,7 +6,7 @@ import { Social } from '../components';
 const Footer = () => {
   return (
     <footer
-      css={tw`flex flex-col justify-center bg-gray-200 w-full p-4 items-center`}
+      css={tw`mt-8 flex flex-col justify-center bg-gray-200 w-full p-4 items-center`}
     >
       <div
         css={tw`flex w-full flex flex-col md:flex-row content-center items-center`}

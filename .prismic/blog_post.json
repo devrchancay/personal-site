@@ -1,0 +1,60 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "slug"
+      }
+    },
+    "cover": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "cover"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "publish_date": {
+      "type": "Date",
+      "config": {
+        "label": "publish date"
+      }
+    },
+    "excerpt": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "excerpt"
+      }
+    },
+    "content": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank": true,
+        "label": "content",
+        "labels": [
+          "javascript",
+          "css",
+          "scss",
+          "jsx",
+          "bash",
+          "json",
+          "diff",
+          "markdown",
+          "graphql",
+          "quote",
+          "highlight",
+          "double-quote"
+        ]
+      }
+    }
+  }
+}

@@ -14,6 +14,7 @@ const BlogPost = ({ data }) => {
       <div css={tw`flex flex-col items-center w-full py-2`}>
         <div css={tw`w-full md:w-3/4`}>
           <Img
+            alt={data.prismicBlogPost.data.cover.alt}
             loading="lazy"
             {...data.prismicBlogPost.data.cover.localFile.childImageSharp}
           />
@@ -45,6 +46,7 @@ export const query = graphql`
         }
         publish_date(formatString: "DD MMMM YYYY", locale: "es")
         cover {
+          alt
           localFile {
             childImageSharp {
               fluid(maxWidth: 640) {

@@ -13,7 +13,8 @@ module.exports = {
       github: process.env.GITHUB,
       email: process.env.EMAIL
     },
-    githubProjects: process.env.SHOW_GITHUB_PROJECTS === 'true'
+    githubProjects: process.env.SHOW_GITHUB_PROJECTS === 'true',
+    githubUsername: process.env.GITHUB_USERNAME || process.env.GITHUB
   },
   plugins: [
     `gatsby-transformer-sharp`,

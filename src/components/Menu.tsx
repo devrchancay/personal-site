@@ -4,7 +4,7 @@ import tw from 'tailwind.macro';
 import { Link } from 'gatsby';
 
 type MenuProps = {
-  isHome: boolean;
+  isHome?: boolean;
 };
 
 const Menu = ({ isHome }: MenuProps) => (

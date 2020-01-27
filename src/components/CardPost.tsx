@@ -13,7 +13,7 @@ type CardPostProps = {
 const CardPost = ({ title, cover, slug }: CardPostProps) => {
   return (
     <div
-      css={tw`max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 pb-3 w-5/6 relative`}
+      css={tw`max-w-sm rounded overflow-hidden shadow-lg hover:shadow-xl mx-2 my-4 pb-3 w-5/6 relative`}
     >
       <Link css={tw`no-underline text-black`} to={slug}>
         {cover && <Img loading="lazy" {...cover} />}

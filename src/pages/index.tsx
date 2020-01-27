@@ -64,7 +64,10 @@ export const query = graphql`
         }
       }
     }
-    allPrismicBlogPost(sort: { fields: [data___publish_date], order: DESC }) {
+    allPrismicBlogPost(
+      sort: { fields: [data___publish_date], order: DESC }
+      limit: 4
+    ) {
       edges {
         node {
           id
