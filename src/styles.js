@@ -1,3 +1,23 @@
+export const globalStyles = ` * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  line-height: 1.25;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+a {
+  text-decoration: none;
+  color: #63b3ed;
+  font-weight: 700;
+}
+`;
+
 export const blogPostStyles = `.BlogPost * {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
@@ -27,8 +47,8 @@ export const blogPostStyles = `.BlogPost * {
   }
   
   .BlogPost .date {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     text-align: center;
   }
   

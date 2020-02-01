@@ -4,7 +4,7 @@ import tw from 'tailwind.macro';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { Layout, Menu, Seo } from '../components';
+import { Layout, Menu, Seo, Footer } from '../components';
 
 const BlogPost = ({ data }) => {
   return (
@@ -33,6 +33,7 @@ const BlogPost = ({ data }) => {
           }}
         />
       </div>
+      <Footer />
     </Layout>
   );
 };
