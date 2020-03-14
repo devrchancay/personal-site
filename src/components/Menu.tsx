@@ -24,6 +24,15 @@ const Menu = ({ isHome }: MenuProps) => (
       <Link
         activeStyle={tw`text-blue-400 p-0`}
         css={tw`font-normal text-gray-800 hover:text-blue-400 underline`}
+        to={'/about'}
+      >
+        About me
+      </Link>
+    </li>
+    <li css={tw`px-2 m-0`}>
+      <Link
+        activeStyle={tw`text-blue-400 p-0`}
+        css={tw`font-normal text-gray-800 hover:text-blue-400 underline`}
         to={'/blog'}
       >
         Blog
