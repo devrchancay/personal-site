@@ -15,6 +15,7 @@ const List = styled.div`
   }
   li {
     margin: 0;
+    margin-bottom: 0.3rem;
     &:before {
       content: '✦';
       margin-right: 0.3rem;
@@ -59,16 +60,16 @@ const AboutHeader = () => {
       `}
       render={data => {
         return (
-          <div css={tw`p-4 md:p-8`}>
+          <div css={tw`p-4 md:p-8 bg-gray-100`}>
             <Menu />
             <div css={tw`md:px-8 md:justify-center md:flex`}>
               <div
-                css={tw`flex flex-col-reverse py-4 px-2 bg-gray-100 md:w-11/12 md:flex-row-reverse`}
+                css={tw`flex flex-col-reverse py-4 px-2 md:w-11/12 md:flex-row-reverse`}
               >
                 <div
                   css={tw`w-full md:mx-8 md:flex md:flex-col md:justify-end`}
                 >
-                  <h1 css={tw`text-2xl mt-3 md:text-4xl`}>
+                  <h1 css={tw`text-2xl mt-3 md:text-4xl text-blue-400 mb-2`}>
                     {data.bio.data.name}
                   </h1>
                   <h2 css={tw`text-xl md:text-3xl`}>
@@ -86,17 +87,19 @@ const AboutHeader = () => {
                     <RenderIf isTrue={!!data.site.siteMetadata.social.email}>
                       <a
                         href={data.site.siteMetadata.social.email}
-                        css={tw`my-2 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10 md:mx-2`}
+                        css={tw`my-2 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10 md:mx-2 md:w-1/2`}
                       >
                         Contact me
                       </a>
                     </RenderIf>
-                    <Link
-                      to="/porfolio"
-                      css={tw`w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-700 bg-blue-100 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 md:py-4 md:text-lg md:px-10 md:mx-2`}
-                    >
-                      Portfolio
-                    </Link>
+                    <RenderIf isTrue={false}>
+                      <Link
+                        to="/porfolio"
+                        css={tw`w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-700 bg-blue-100 hover:text-blue-600 hover:bg-blue-200 focus:outline-none focus:shadow-outline focus:border-indigo-300 md:py-4 md:text-lg md:px-10 md:mx-2`}
+                      >
+                        Portfolio
+                      </Link>
+                    </RenderIf>
                   </div>
                 </div>
                 <div css={tw`w-full`}>

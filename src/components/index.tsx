@@ -12,3 +12,5 @@ export { default as Projects } from './Projects';
 export { default as CardProject } from './CardProject';
 export { default as Pagination } from './Pagination';
 export { default as AboutHeader } from './AboutHeader';
+export { default as Companies } from './Companies';
+export { default as Experience } from './Experience';
