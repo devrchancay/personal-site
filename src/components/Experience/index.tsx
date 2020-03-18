@@ -50,25 +50,25 @@ const Experience = () => {
       `}
       render={data => {
         return (
-          <div css={tw`p-4 md:p-8 bg-white`}>
-            <div css={tw`md:px-8 md:justify-center md:flex`}>
-              <div css={tw`md:w-11/12`}>
-                <h2 css={tw`my-2 text-center text-2xl md:text-4xl`}>
+          <div css={tw`p-4 lg:p-8 bg-white`}>
+            <div css={tw`lg:px-8 lg:justify-center lg:flex`}>
+              <div css={tw`lg:w-11/12`}>
+                <h2 css={tw`my-2 text-center text-2xl lg:text-4xl`}>
                   Experience
                 </h2>
-                <h3 css={tw`text-center text-base md:text-xl text-gray-500`}>
+                <h3 css={tw`text-center text-base lg:text-xl text-gray-500`}>
                   Jobs as a Web developer.
                 </h3>
                 <div
-                  css={tw`md:mt-8 py-4 flex flex-col items-center content-center md:justify-start sm:justify-center`}
+                  css={tw`lg:mt-8 py-4 flex flex-col items-center content-center lg:justify-start sm:justify-center`}
                 >
                   {data.experience.edges.map(({ node }) => (
                     <div
-                      css={tw`w-5/6 md:w-2/3 my-2 flex flex-col md:flex-row  border-gray-300 border-b pb-2`}
+                      css={tw`w-5/6 lg:w-full lg:w-2/3 my-2 flex flex-col lg:flex-row  border-gray-300 border-b pb-2`}
                       key={node.id}
                     >
                       <div
-                        css={tw`md:w-1/3 flex justify-center content-start  mb-6 md:mb-0 items-start pt-4`}
+                        css={tw`lg:w-1/3 flex justify-center content-start  mb-6 lg:mb-0 items-start pt-4`}
                       >
                         <div
                           css={tw`shadow-lg px-2 py-6 bg-blue-400`}
@@ -78,9 +78,10 @@ const Experience = () => {
                             {node.data.experience_company.text}
                           </p>
                           <p css={tw`text-center`}>
+                            
                             {formatDistanceStrict(
                               new Date(node.data.startDate),
-                              node.endDate
+                              node.data.endDate
                                 ? new Date(node.data.endDate)
                                 : new Date(),
                               { roundingMethod: 'floor' }
@@ -88,9 +89,9 @@ const Experience = () => {
                           </p>
                         </div>
                       </div>
-                      <div css={tw`md:w-2/3 text-center md:text-left`}>
+                      <div css={tw`lg:w-2/3 text-center lg:text-left`}>
                         <h4
-                          css={tw`text-center md:text-left text-xl md:text-3xl font-sans my-2`}
+                          css={tw`text-center lg:text-left text-xl lg:text-3xl font-sans my-2`}
                         >
                           {node.data.experience_position.text}
                         </h4>
@@ -101,6 +102,7 @@ const Experience = () => {
                             : 'Present'}
                         </p>
                         <List
+                          css={tw`text-center lg:text-left`}
                           dangerouslySetInnerHTML={{
                             __html: node.data.experience_description.html
                           }}
