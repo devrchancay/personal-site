@@ -2,7 +2,7 @@
     from = "/blog/2019/05/29/antipatrones-react"
     to = "/blog/antipatrones-react"
     status = 301
-    force = false
+    force = true
 [[redirects]]
     from = "/blog/2018/06/25/un-vistazo-rapido-a-tailwindcss"
     to = "/blog/un-vistazo-rapido-a-tailwindcss"
