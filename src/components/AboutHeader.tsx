@@ -89,7 +89,7 @@ const AboutHeader = () => {
                     <RenderIf isTrue={!!data.site.siteMetadata.social.email}>
                       <a
                         href={data.site.siteMetadata.social.email}
-                        css={tw`my-2 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10 md:mx-2 md:w-1/2`}
+                        css={tw`my-2 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md  bg-primary hover:bg-primary-hover no-underline text-muted focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10 md:mx-2 md:w-1/2`}
                       >
                         Contact me
                       </a>

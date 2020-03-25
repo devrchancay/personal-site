@@ -11,9 +11,9 @@ p {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-a {
+a:not(a[href="mailto@*"]) {
   text-decoration: none;
-  color: #63b3ed;
+  color: var(--color-primary) !important;
   font-weight: 700;
 }
 `;
@@ -144,6 +144,7 @@ export const blogPostStyles = `.BlogPost * {
     list-style: none;
     margin-left: 30px;
     margin-bottom: 14px;
+    color: var(--color-secondary);
   }
   
   .BlogPost li:before {

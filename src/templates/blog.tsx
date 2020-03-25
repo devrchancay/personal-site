@@ -10,8 +10,8 @@ const Blog = ({ data, pageContext }) => {
     <Layout>
       <Seo title={`Blog`} />
       <Menu isHome={false} />
-      <div css={tw`bg-background-muted py-4`}>
-        <h1 css={tw`text-center text-secondary text-3xl mt-4 mb-0`}>
+      <div css={tw`bg-background-muted py-4 lg:mt-6`}>
+        <h1 css={tw`text-center text-primary text-3xl mt-4 mb-0`}>
           {data.site.siteMetadata.title}
         </h1>
         <h2 css={tw`text-center text-xl mt-2 text-secondary`}>Blog</h2>
@@ -31,9 +31,11 @@ const Blog = ({ data, pageContext }) => {
                       fluid={node.data.cover.localFile.childImageSharp.fluid}
                     />
                   </div>
-                  <div css={tw`lg:flex lg:flex-col lg:h-full lg:pl-8 lg:w-2/3`}>
+                  <div
+                    css={tw`lg:flex lg:flex-col lg:h-full lg:pl-8 lg:w-2/3 lg:py-2`}
+                  >
                     <h3
-                      css={tw`mt-2 mb-0 text-base text-secondary lg:text-3xl lg:mb-3 lg:mt-2`}
+                      css={tw`mt-2 mb-0 text-base text-secondary lg:text-3xl`}
                     >
                       {node.data.title.text}
                     </h3>

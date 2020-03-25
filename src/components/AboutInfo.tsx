@@ -12,7 +12,7 @@ type AboutInfoProps = {
 const AboutInfo = ({ name, description, avatar }: AboutInfoProps) => {
   return (
     <div
-      css={tw`bg-background-muted flex justify-around flex-col md:flex-row-reverse items-center content-center py-8`}
+      css={tw`bg-background-secondary flex justify-around flex-col md:flex-row-reverse items-center content-center py-8`}
     >
       <div
         css={tw`px-6 sm:flex sm:justify-center sm:content-center sm:items-center`}
@@ -29,7 +29,7 @@ const AboutInfo = ({ name, description, avatar }: AboutInfoProps) => {
       >
         <div css={tw`px-6 py-2`}>
           <h3
-            css={tw`font-sans text-center text-secondary my-2 md:text-3xl md:my-4 font-bold md:text-left`}
+            css={tw`text-primary font-sans text-center my-2 md:text-3xl md:my-4 font-bold md:text-left`}
           >
             {name}
           </h3>
