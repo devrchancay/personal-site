@@ -6,7 +6,7 @@ import { Social } from '../components';
 const Footer = () => {
   return (
     <footer
-      css={tw`mt-8 flex flex-col justify-center bg-gray-200 w-full p-4 items-center`}
+      css={tw`mt-8 flex flex-col justify-center bg-background-muted w-full p-4 items-center`}
     >
       <div
         css={tw`flex w-full flex flex-col md:flex-row content-center items-center`}
@@ -14,12 +14,12 @@ const Footer = () => {
         <div
           css={tw`text-2xl font-bold w-full md:w-1/3 py-2 flex justify-center md:justify-start`}
         >
-          <h3 css={tw`font-sans`}>Ramón Chancay Ortega</h3>
+          <h3 css={tw`text-secondary font-sans`}>Ramón Chancay Ortega</h3>
         </div>
         <div
           css={tw`order-last md:order-none w-full md:w-1/3 py-2 flex justify-center items-center content-center`}
         >
-          <small css={tw`text-md font-bold font-sans`}>
+          <small css={tw`text-secondary text-md font-bold font-sans`}>
             Made with <span css={tw`text-red-500`}>❤</span> using GatsbyJS and
             Netlify
           </small>

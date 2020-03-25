@@ -20,11 +20,13 @@ const BlogPost = ({ data }) => {
           />
         </div>
         <div css={tw`px-4`}>
-          <h1 css={tw`text-center text-2xl md:text-4xl my-4`}>
+          <h1 css={tw`text-primary text-center text-2xl md:text-4xl my-4`}>
             {data.prismicBlogPost.data.title.text}
           </h1>
         </div>
-        <p className="date">{data.prismicBlogPost.data.publish_date}</p>
+        <p className="date" css={tw`text-secondary`}>
+          {data.prismicBlogPost.data.publish_date}
+        </p>
         <div
           className="BlogPost"
           css={tw`w-full px-5 md:w-3/4`}

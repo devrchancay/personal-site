@@ -14,6 +14,7 @@ const List = styled.div`
     margin: 1rem 0;
   }
   li {
+    color: var(--color-secondary);
     margin: 0;
     margin-bottom: 0.3rem;
     &:before {
@@ -60,7 +61,7 @@ const AboutHeader = () => {
       `}
       render={data => {
         return (
-          <div css={tw`p-4 md:p-8 bg-gray-100`}>
+          <div css={tw`bg-background p-4 md:p-8`}>
             <Menu />
             <div css={tw`md:px-8 md:justify-center md:flex`}>
               <div
@@ -69,14 +70,15 @@ const AboutHeader = () => {
                 <div
                   css={tw`w-full md:mx-8 md:flex md:flex-col md:justify-end`}
                 >
-                  <h1 css={tw`text-2xl mt-3 md:text-4xl text-blue-400 mb-2`}>
+                  <h1 css={tw`text-2xl mt-3 md:text-4xl text-primary mb-2`}>
                     {data.bio.data.name}
                   </h1>
-                  <h2 css={tw`text-xl md:text-3xl`}>
+                  <h2 css={tw`text-secondary text-xl md:text-3xl`}>
                     {data.bio.data.position}
                   </h2>
 
                   <List
+                    color={'red'}
                     dangerouslySetInnerHTML={{
                       __html: data.bio.data.about_resume.html
                     }}

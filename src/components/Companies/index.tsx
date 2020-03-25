@@ -34,13 +34,15 @@ const Companies = () => {
       `}
       render={data => {
         return (
-          <div css={tw`p-4 md:p-8 bg-white`}>
+          <div css={tw`bg-background-muted p-4 md:p-8`}>
             <div css={tw`md:px-8 md:justify-center md:flex`}>
               <div css={tw`md:w-11/12`}>
-                <h2 css={tw`my-2 text-center text-2xl md:text-4xl`}>
+                <h2
+                  css={tw`text-secondary my-2 text-center text-2xl md:text-4xl`}
+                >
                   Companies that trust my work.
                 </h2>
-                <h3 css={tw`text-center text-base md:text-xl text-gray-500`}>
+                <h3 css={tw`text-center text-base md:text-xl text-secondary`}>
                   Developing customized solutions.
                 </h3>
                 <div

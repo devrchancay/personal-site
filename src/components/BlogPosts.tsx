@@ -11,7 +11,7 @@ const BlogPost = ({ posts = [] }) => {
     >
       <div css={tw`flex`}>
         <h2
-          css={tw`text-2xl font-sans font-bold md:text-left text-gray-800 mx-2 font-bold`}
+          css={tw`text-2xl font-sans font-bold md:text-left text-secondary mx-2 font-bold`}
         >
           Latest articles of the blog
         </h2>
@@ -33,9 +33,9 @@ const BlogPost = ({ posts = [] }) => {
       >
         <Link
           to="/blog"
-          css={tw`bg-gray-300 hover:fill-white hover:bg-blue-500 hover:text-white text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center`}
+          css={tw`bg-primary hover:bg-primary-hover hover:bg-blue-500 hover:text-white text-secondary font-bold py-2 px-4 rounded inline-flex items-center`}
         >
-          <span css={tw`font-sans`}>Go to blog</span>
+          <span css={tw`text-background font-sans`}>Go to blog</span>
         </Link>
       </div>
     </div>

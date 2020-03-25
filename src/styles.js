@@ -30,6 +30,7 @@ export const blogPostStyles = `.BlogPost * {
   h4 {
     font-family: Poppins;
     font-weight: bold;
+    color: var(--color-primary);
   }
   
   .BlogPost p,
@@ -37,6 +38,7 @@ export const blogPostStyles = `.BlogPost * {
   pre,
   code {
     font-family: Sintony, serif;
+    color: var(--color-secondary);
   }
   
   .BlogPost h1 {
@@ -50,6 +52,7 @@ export const blogPostStyles = `.BlogPost * {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     text-align: center;
+    color: var(--color-secondary);
   }
   
   .BlogPost h3 + h4 {
@@ -120,7 +123,7 @@ export const blogPostStyles = `.BlogPost * {
   }
   
   .BlogPost a {
-    color: #000000;
+    color: var(--color-info);
     text-decoration: underline;
   }
   
@@ -145,6 +148,7 @@ export const blogPostStyles = `.BlogPost * {
   
   .BlogPost li:before {
     content: '-';
+    color: var(--color-info);
     padding-top: 4px;
     padding-right: 15px;
     position: absolute;

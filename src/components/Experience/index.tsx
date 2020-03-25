@@ -12,6 +12,7 @@ const List = styled.div`
     margin: 1rem 0;
   }
   li {
+    color: var(--color-secondary);
     margin: 0;
     margin-bottom: 0.3rem;
   }
@@ -50,10 +51,12 @@ const Experience = () => {
       `}
       render={data => {
         return (
-          <div css={tw`p-4 lg:p-8 bg-white`}>
+          <div css={tw`p-4 lg:p-8 bg-background`}>
             <div css={tw`lg:px-8 lg:justify-center lg:flex`}>
               <div css={tw`lg:w-11/12`}>
-                <h2 css={tw`my-2 text-center text-2xl lg:text-4xl`}>
+                <h2
+                  css={tw`text-primary my-2 text-center text-2xl lg:text-4xl`}
+                >
                   Experience
                 </h2>
                 <h3 css={tw`text-center text-base lg:text-xl text-gray-500`}>
@@ -71,14 +74,13 @@ const Experience = () => {
                         css={tw`lg:w-1/3 flex justify-center content-start  mb-6 lg:mb-0 items-start pt-4`}
                       >
                         <div
-                          css={tw`shadow-lg px-2 py-6 bg-blue-400`}
+                          css={tw`shadow-lg px-2 py-6 bg-primary`}
                           style={{ minWidth: 190, maxWidth: 190 }}
                         >
-                          <p css={tw`text-white text-center`}>
+                          <p css={tw`text-white font-bold text-center`}>
                             {node.data.experience_company.text}
                           </p>
                           <p css={tw`text-center`}>
-                            
                             {formatDistanceStrict(
                               new Date(node.data.startDate),
                               node.data.endDate
@@ -91,11 +93,11 @@ const Experience = () => {
                       </div>
                       <div css={tw`lg:w-2/3 text-center lg:text-left`}>
                         <h4
-                          css={tw`text-center lg:text-left text-xl lg:text-3xl font-sans my-2`}
+                          css={tw`text-primary text-center lg:text-left text-xl lg:text-3xl font-sans my-2`}
                         >
                           {node.data.experience_position.text}
                         </h4>
-                        <p css={tw`text-gray-500 mb-2`}>
+                        <p css={tw`text-secondary mb-2`}>
                           {node.data.experience_start} -{' '}
                           {node.data.experience_end
                             ? node.data.experience_end

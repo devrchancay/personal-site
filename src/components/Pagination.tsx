@@ -24,7 +24,7 @@ const Pagination = ({
         {!!previous && (
           <li css={tw`w-full md:w-1/5`}>
             <Link
-              css={tw`my-2 bg-blue-200 p-4 rounded-lg flex justify-center content-center md:my-0 text-gray-800 font-bold`}
+              css={tw`my-2 bg-blue-200 p-4 rounded-lg flex justify-center content-center md:my-0 text-secondary font-bold`}
               to={previous}
             >
               {nextLabel}
@@ -34,7 +34,7 @@ const Pagination = ({
         {!!next && (
           <li css={tw`w-full md:w-1/5`}>
             <Link
-              css={tw`my-2 bg-blue-200 p-4 rounded-lg flex justify-center content-center md:my-0 text-gray-800 font-bold`}
+              css={tw`my-2 bg-blue-200 p-4 rounded-lg flex justify-center content-center md:my-0 text-secondary font-bold`}
               to={next}
             >
               {previousLabel}

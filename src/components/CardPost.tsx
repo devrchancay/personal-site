@@ -19,7 +19,9 @@ const CardPost = ({ title, cover, slug }: CardPostProps) => {
         {cover && <Img loading="lazy" {...cover} />}
 
         <div css={tw`px-4 py-4`}>
-          <h3 css={tw`font-sans font-bold text-xl mb-2`}>{title}</h3>
+          <h3 css={tw`text-secondary font-sans font-bold text-xl mb-2`}>
+            {title}
+          </h3>
         </div>
       </Link>
     </div>

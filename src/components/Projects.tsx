@@ -7,11 +7,11 @@ import { CardProject } from '../components';
 const Projects = ({ projects }) => {
   return (
     <div
-      css={tw`flex flex-col justify-center items-center content-center py-8 md:w-full`}
+      css={tw`bg-background flex flex-col justify-center items-center content-center py-8 md:w-full`}
     >
       <div css={tw`px-4`}>
         <h2
-          css={tw`text-2xl font-sans font-bold text-center md:text-left text-gray-800 mx-2 font-bold pb-8`}
+          css={tw`text-2xl font-sans font-bold text-center md:text-left text-secondary mx-2 font-bold pb-8`}
         >
           Featured projects
         </h2>
@@ -32,9 +32,9 @@ const Projects = ({ projects }) => {
         <a
           href="https://github.com/devrchancay"
           target="__blank"
-          css={tw`bg-gray-300 hover:fill-white hover:bg-blue-500 hover:text-white text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center`}
+          css={tw`bg-primary hover:bg-primary-hover text-secondary font-bold py-2 px-4 rounded inline-flex items-center`}
         >
-          <span css={tw`font-sans`}>view on github</span>
+          <span css={tw`text-background font-sans`}>view on github</span>
         </a>
       </div>
     </div>

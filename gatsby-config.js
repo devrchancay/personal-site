@@ -17,6 +17,7 @@ module.exports = {
     githubUsername: process.env.GITHUB_USERNAME || process.env.GITHUB
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-image`,

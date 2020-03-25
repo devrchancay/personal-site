@@ -1,15 +1,20 @@
 /** @jsx jsx */
+import React from 'react';
 import { jsx } from '@emotion/core';
 import tw from 'tailwind.macro';
 import { FaTwitterSquare, FaGithub, FaLinkedin, FaAt } from 'react-icons/fa';
 import { StaticQuery, graphql } from 'gatsby';
 import { RenderIf } from '../components';
+import { ThemeContext } from '../context/ThemeContext';
 
 type SocialProps = {
   size: number;
 };
 
 const Social = ({ size = 40 }: SocialProps) => {
+  const context = React.useContext(ThemeContext);
+
+  const githubColor = context.theme === 'theme-light' ? '#000' : '#cbd5e0';
   return (
     <StaticQuery
       query={graphql`
@@ -48,7 +53,7 @@ const Social = ({ size = 40 }: SocialProps) => {
                     target="_blank"
                     href={data.site.siteMetadata.social.github}
                   >
-                    <FaGithub color="#000" size={size} />
+                    <FaGithub color={githubColor} size={size} />
                   </a>
                 </li>
               </RenderIf>
