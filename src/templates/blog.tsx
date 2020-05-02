@@ -9,7 +9,9 @@ const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <Seo title={`Blog`} />
-      <Menu isHome={false} />
+      <div css={tw`pt-4`}>
+        <Menu isHome={false} />
+      </div>
       <div css={tw`bg-background-muted py-4 lg:mt-6`}>
         <h1 css={tw`text-center text-primary text-3xl mt-4 mb-0`}>
           {data.site.siteMetadata.title}
@@ -40,7 +42,7 @@ const Blog = ({ data, pageContext }) => {
                       {node.data.title.text}
                     </h3>
                     <p
-                      css={tw`text-secondary m-0 text-xs lg:w-11/12 lg:text-base lg:my-3 font-light`}
+                      css={tw`text-secondary no-underline m-0 text-xs lg:w-11/12 lg:text-base lg:my-3 font-light`}
                     >
                       {node.data.excerpt.text}
                     </p>

@@ -8,7 +8,15 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: `/blog/${node.uid}`
+      value: `/blog/${node.uid}`,
+    });
+  }
+
+  if (node.internal.type === 'PrismicProjects') {
+    createNodeField({
+      node,
+      name: 'slug',
+      value: `/project/${node.uid}`,
     });
   }
 };
@@ -47,6 +55,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allPrismicProjects {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -69,13 +87,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         BlogCurrentPage: i + 1,
         PreviousBlogPost: {
           title: 'yolo prev',
-          slug: '/yolo'
+          slug: '/yolo',
         },
         NextBlogPost: {
           title: 'yolo next',
-          slug: '/yolo'
-        }
-      }
+          slug: '/yolo',
+        },
+      },
     });
   });
 
@@ -84,8 +102,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: node.fields.slug,
       component: path.resolve('./src/templates/BlogPost.tsx'),
       context: {
-        PostID: node.id
-      }
+        PostID: node.id,
+      },
+    });
+  });
+
+  results.data.allPrismicProjects.edges.forEach(({ node }) => {
+    actions.createPage({
+      path: node.fields.slug,
+      component: path.resolve('./src/templates/Project.tsx'),
+      context: {
+        ProjectId: node.id,
+      },
     });
   });
 };

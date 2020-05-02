@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
+import tw from 'tailwind.macro';
 
 import {
   Layout,
@@ -12,14 +13,16 @@ import {
   Social,
   Footer,
   RenderIf,
-  Projects
+  Projects,
 } from '../components';
 
 const Home = ({ data }) => {
   return (
     <Layout>
       <Seo title="Front-end Developer and Educator" />
-      <Menu isHome />
+      <div css={tw`bg-background pt-4`}>
+        <Menu isHome />
+      </div>
       <main>
         <Hero
           name={data.prismicBio.data.short_name}

@@ -59,9 +59,9 @@ const AboutHeader = () => {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         return (
-          <div css={tw`bg-background p-4 md:p-8`}>
+          <div css={tw`bg-background pt-4`}>
             <Menu />
             <div css={tw`md:px-8 md:justify-center md:flex`}>
               <div
@@ -80,7 +80,7 @@ const AboutHeader = () => {
                   <List
                     color={'red'}
                     dangerouslySetInnerHTML={{
-                      __html: data.bio.data.about_resume.html
+                      __html: data.bio.data.about_resume.html,
                     }}
                   />
                   <div
