@@ -1,5 +1,4 @@
 import { jsx } from '@emotion/core';
-import { Link } from 'gatsby';
 import tw from 'tailwind.macro';
 import Image from 'gatsby-image';
 
@@ -13,9 +12,9 @@ const ProjectItem = ({ slug, name, excerpt, image }) => {
         <div css={tw`lg:w-1/2 lg:px-1`}>
           <h3 css={tw`my-2`}>{name}</h3>
           <p css={tw`text-secondary`}>{excerpt}</p>
-          <Link css={tw`my-2 block text-xl`} to={slug}>
-            See more »
-          </Link>
+          <a target="blank" css={tw`my-2 block text-xl`} href={slug}>
+            See project »
+          </a>
         </div>
       </article>
     </div>

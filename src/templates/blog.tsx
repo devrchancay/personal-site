@@ -24,7 +24,7 @@ const Blog = ({ data, pageContext }) => {
             return (
               <Link
                 key={node.id}
-                css={tw`w-11/12 px-4 pt-2 lg:w-2/3`}
+                css={tw`w-11/12 px-4 pt-2 lg:w-2/3 no-underline`}
                 to={node.fields.slug}
               >
                 <article css={tw`my-2 lg:flex bg-background-muted`}>

@@ -55,16 +55,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      allPrismicProjects {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -103,16 +93,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve('./src/templates/BlogPost.tsx'),
       context: {
         PostID: node.id,
-      },
-    });
-  });
-
-  results.data.allPrismicProjects.edges.forEach(({ node }) => {
-    actions.createPage({
-      path: node.fields.slug,
-      component: path.resolve('./src/templates/Project.tsx'),
-      context: {
-        ProjectId: node.id,
       },
     });
   });

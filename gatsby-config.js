@@ -11,10 +11,10 @@ module.exports = {
       twitter: process.env.TWITTER,
       linkedin: process.env.LINKEDIN,
       github: process.env.GITHUB,
-      email: process.env.EMAIL
+      email: process.env.EMAIL,
     },
     githubProjects: process.env.SHOW_GITHUB_PROJECTS === 'true',
-    githubUsername: process.env.GITHUB_USERNAME || process.env.GITHUB
+    githubUsername: process.env.GITHUB_USERNAME || process.env.GITHUB,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -31,20 +31,20 @@ module.exports = {
       options: {
         repositoryName: process.env.PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        htmlSerializer: () => prismicHtmlSerializer
-      }
+        htmlSerializer: () => prismicHtmlSerializer,
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: 'src/utils/typography'
-      }
+        pathToConfigModule: 'src/utils/typography',
+      },
     },
     {
       resolve: 'gatsby-source-github',
       options: {
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         },
         queries: [
           `{
@@ -67,9 +67,9 @@ module.exports = {
                 }
               }
             }
-          }`
-        ]
-      }
+          }`,
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -78,13 +78,13 @@ module.exports = {
         sitemap: `${process.env.SITE_URL}/sitemap.xml`,
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
-      }
-    }
-  ]
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
+  ],
 };

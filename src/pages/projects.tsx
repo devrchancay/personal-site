@@ -28,7 +28,7 @@ const Projects = ({ data }) => {
                 <div css={tw`w-full mb-2 p-4 lg:w-1/2 lg:hover:shadow-2xl`}>
                   <ProjectItem
                     name={node.data.name.text}
-                    slug={node.fields.slug}
+                    slug={node.data.demo.url}
                     excerpt={node.data.excerpt.text}
                     image={node.data.image.localFile.childImageSharp.fluid}
                   />
@@ -57,6 +57,9 @@ export const query = graphql`
           data {
             name {
               text
+            }
+            demo {
+              url
             }
             image {
               alt
