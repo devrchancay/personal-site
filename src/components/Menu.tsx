@@ -33,6 +33,15 @@ const Menu = ({ isHome }: MenuProps) => (
       <Link
         activeStyle={tw`text-primary p-0`}
         css={tw`font-normal text-secondary hover:text-primary underline`}
+        to={'/projects'}
+      >
+        Projects
+      </Link>
+    </li>
+    <li css={tw`px-2 m-0`}>
+      <Link
+        activeStyle={tw`text-primary p-0`}
+        css={tw`font-normal text-secondary hover:text-primary underline`}
         to={'/blog'}
       >
         Blog
