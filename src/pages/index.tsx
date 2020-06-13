@@ -36,7 +36,6 @@ const Home = ({ data }) => {
             data.prismicBio.data.profile_picture.localFile.childImageSharp.fluid
           }
         />
-        <BlogPost posts={data.allPrismicBlogPost.edges} />
         <RenderIf isTrue={data.site.siteMetadata.githubProjects}>
           <Projects projects={data.allGithubPinneditems.edges} />
         </RenderIf>
