@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useCallback, useMemo, useState, memo } from 'react';
 
 const Header = () => {
@@ -7,7 +8,9 @@ const Header = () => {
     setIsOpen(!isOpen);
   }, [isOpen, setIsOpen]);
 
-  const classMenu = useMemo(() => (isOpen ? 'h-screen' : 'h-0'), [isOpen]);
+  const classMenu = useMemo(() => (isOpen ? 'w-screen h-screen' : 'w-0 h-0'), [
+    isOpen,
+  ]);
 
   return (
     <header className="py-2 px-2 flex justify-between lg:py-3">
@@ -32,39 +35,35 @@ const Header = () => {
         </button>
       </div>
       <ul
-        className={`${classMenu} text-gray-700 transition-all duration-300 overflow-hidden absolute top-0 w-full bg-white space-y-6  lg:flex lg:bg-white lg:static lg:space-y-0 lg:h-auto lg:w-auto lg:space-x-5 lg:px-0 lg:py-0 items-center`}
+        className={`${classMenu} text-gray-700 transition-all duration-300 overflow-hidden absolute left-0 pl-2 top-0 w-full bg-white space-y-6  lg:flex lg:bg-white lg:static lg:space-y-0 lg:h-auto lg:w-auto lg:space-x-5 lg:px-0 lg:py-0 items-center`}
       >
         <li className="pt-12 lg:pt-0">
-          <a
-            className="font-hind text-5xl lg:text-xl hover:text-gray-900"
-            href="/"
-          >
-            About
-          </a>
+          <Link href="/about">
+            <a className="font-hind text-5xl lg:text-xl hover:text-gray-900">
+              About
+            </a>
+          </Link>
         </li>
         <li>
-          <a
-            className="font-hind text-5xl lg:text-xl hover:text-gray-900"
-            href="/"
-          >
-            Services
-          </a>
+          <Link href="/services">
+            <a className="font-hind text-5xl lg:text-xl hover:text-gray-900">
+              Services
+            </a>
+          </Link>
         </li>
         <li>
-          <a
-            className="font-hind text-5xl lg:text-xl hover:text-gray-900"
-            href="/"
-          >
-            Projects
-          </a>
+          <Link href="/projects">
+            <a className="font-hind text-5xl lg:text-xl hover:text-gray-900">
+              Projects
+            </a>
+          </Link>
         </li>
         <li>
-          <a
-            className="font-hind text-5xl lg:text-xl hover:text-gray-900"
-            href="/"
-          >
-            Contact
-          </a>
+          <Link href="/contact">
+            <a className="font-hind text-5xl lg:text-xl hover:text-gray-900">
+              Contact
+            </a>
+          </Link>
         </li>
       </ul>
     </header>

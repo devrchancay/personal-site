@@ -231,6 +231,12 @@ module.exports = {
     },
     container: {
       center: true,
+      padding: {
+        default: '0.25rem',
+        sm: '0.5rem',
+        lg: '2rem',
+        xl: '3rem',
+      },
     },
     cursor: {
       auto: 'auto',
