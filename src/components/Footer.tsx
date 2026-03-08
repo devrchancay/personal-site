@@ -6,6 +6,7 @@ import { Social } from '../components';
 const Footer = () => {
   return (
     <footer
+      className="animate-fade-in"
       css={tw`mt-8 flex flex-col justify-center bg-background-muted w-full p-4 items-center`}
     >
       <div

@@ -12,6 +12,7 @@ type AboutInfoProps = {
 const AboutInfo = ({ name, description, avatar }: AboutInfoProps) => {
   return (
     <div
+      className="animate-fade-in"
       css={tw`bg-background-secondary flex justify-around flex-col md:flex-row-reverse items-center content-center py-8`}
     >
       <div
