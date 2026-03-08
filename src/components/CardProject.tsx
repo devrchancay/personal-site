@@ -4,7 +4,7 @@ import tw from 'tailwind.macro';
 
 const CardProject = ({ name, descriptionHTML, url, forkCount, stargazers }) => {
   return (
-    <div css={tw`bg-background-muted shadow-lg p-2 w-full md:h-24`}>
+    <div className="hover-lift" css={tw`bg-background-muted shadow-lg p-2 w-full md:h-24`}>
       <div css={tw`flex justify-between`}>
         <div>
           <a

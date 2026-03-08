@@ -7,6 +7,7 @@ import { CardProject } from '../components';
 const Projects = ({ projects }) => {
   return (
     <div
+      className="animate-fade-in"
       css={tw`bg-background flex flex-col justify-center items-center content-center py-8 md:w-full`}
     >
       <div css={tw`px-4`}>

@@ -36,8 +36,9 @@ const Social = ({ size = 40 }: SocialProps) => {
           <div css={tw`flex justify-center`}>
             <ul css={tw`list-none flex p-0`}>
               <RenderIf isTrue={!!data.site.siteMetadata.social.twitter}>
-                <li css={tw`w-12 px-2 flex justify-center`}>
+                <li className="animate-fade-in stagger-1" css={tw`w-12 px-2 flex justify-center`}>
                   <a
+                    className="social-icon-hover"
                     rel="noopener noreferrer"
                     target="_blank"
                     href={data.site.siteMetadata.social.twitter}
@@ -47,8 +48,9 @@ const Social = ({ size = 40 }: SocialProps) => {
                 </li>
               </RenderIf>
               <RenderIf isTrue={!!data.site.siteMetadata.social.github}>
-                <li css={tw`w-12 px-2 flex justify-center`}>
+                <li className="animate-fade-in stagger-2" css={tw`w-12 px-2 flex justify-center`}>
                   <a
+                    className="social-icon-hover"
                     rel="noopener noreferrer"
                     target="_blank"
                     href={data.site.siteMetadata.social.github}
@@ -58,8 +60,9 @@ const Social = ({ size = 40 }: SocialProps) => {
                 </li>
               </RenderIf>
               <RenderIf isTrue={!!data.site.siteMetadata.social.linkedin}>
-                <li css={tw`w-12 px-2 flex justify-center`}>
+                <li className="animate-fade-in stagger-3" css={tw`w-12 px-2 flex justify-center`}>
                   <a
+                    className="social-icon-hover"
                     rel="noopener noreferrer"
                     target="_blank"
                     href={data.site.siteMetadata.social.linkedin}
@@ -69,8 +72,11 @@ const Social = ({ size = 40 }: SocialProps) => {
                 </li>
               </RenderIf>
               <RenderIf isTrue={!!data.site.siteMetadata.social.email}>
-                <li css={tw`w-12 px-2 flex justify-center`}>
-                  <a href={data.site.siteMetadata.social.email}>
+                <li className="animate-fade-in stagger-4" css={tw`w-12 px-2 flex justify-center`}>
+                  <a
+                    className="social-icon-hover"
+                    href={data.site.siteMetadata.social.email}
+                  >
                     <FaAt color="#63b3ed" size={size} />
                   </a>
                 </li>

@@ -13,6 +13,7 @@ const Menu = ({ isHome }: MenuProps) => (
       <li css={tw`px-2 m-0`}>
         <Link
           activeStyle={tw`text-primary p-0`}
+          className="link-transition"
           css={tw`font-normal text-secondary hover:text-primary underline`}
           to={'/'}
         >
@@ -23,7 +24,8 @@ const Menu = ({ isHome }: MenuProps) => (
     <li css={tw`px-2 m-0`}>
       <Link
         activeStyle={tw`text-primary p-0`}
-        css={tw`font-normal text-secondary hover:text-primary underline`}
+        className="link-transition"
+          css={tw`font-normal text-secondary hover:text-primary underline`}
         to={'/about'}
       >
         About me
@@ -32,7 +34,8 @@ const Menu = ({ isHome }: MenuProps) => (
     <li css={tw`px-2 m-0`}>
       <Link
         activeStyle={tw`text-primary p-0`}
-        css={tw`font-normal text-secondary hover:text-primary underline`}
+        className="link-transition"
+          css={tw`font-normal text-secondary hover:text-primary underline`}
         to={'/projects'}
       >
         Projects
